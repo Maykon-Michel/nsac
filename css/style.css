@@ -64,91 +64,105 @@ body {
 
 /* Sidebar */
 
-.navbar {
+#sidebar {
 	overflow-y: auto;
 }
 
-.navbar::-webkit-scrollbar
-{
-	width: 0px;
+#sidebar::-webkit-scrollbar {
+  	width: 0px;
 }
 
-.navbar:hover::-webkit-scrollbar
-{
-	width: 10px;
+@media (max-width: 990px) {
+	#sidebar:hover::-webkit-scrollbar {
+		width: 5px;
+	}
 }
 
-.navbar-inverse.sidebar {
+@media (min-width: 991px) {
+	#sidebar::-webkit-scrollbar {
+		width: 8px;
+	}
+}
+
+#sidebar::-webkit-scrollbar-track {
+  	background: rgba(0, 0, 0, 0.1);
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  	background: rgba(0, 0, 0, 0.3);
+}
+
+#sidebar.navbar-inverse {
 	border: none;
 	background: var(--color-theme-d2);
 }
 
-.sidebar .navbar-nav a:hover,
-.sidebar .navbar-nav a:focus,
-.sidebar .navbar-nav .active a,
-.sidebar .navbar-nav .active a:hover,
-.sidebar .navbar-nav .active a:focus {
+#sidebar .navbar-nav a:hover,
+#sidebar .navbar-nav a:focus,
+#sidebar .navbar-nav .active a,
+#sidebar .navbar-nav .active a:hover,
+#sidebar .navbar-nav .active a:focus {
+	color: #FFFFFF;
 	background: var(--color-theme-c0);
 	box-shadow: none;
 }
 
-.sidebar .navbar-toggle:hover,
-.sidebar .navbar-toggle:focus {
+#sidebar .navbar-toggle:hover,
+#sidebar .navbar-toggle:focus {
     background:  red;
 }
 
-nav.sidebar.navbar {
+#sidebar.navbar {
 	border-radius: 0px;
 }
 
-.sidebar .navbar-brand {
+#sidebar .navbar-brand {
     color: #FFFFFF;
 	font-size: 14px;
 }
 
-.sidebar .navbar-nav > li > a {
+#sidebar .navbar-nav > li > a {
     color: #CCCCCC;
 	text-shadow: none;
 }
 
-.sidebar .navbar-nav > li > a:hover,
-.sidebar .navbar-nav > li > a:focus {
+#sidebar .navbar-nav > li > a:hover,
+#sidebar .navbar-nav > li > a:focus {
     background-color: var(--color-theme-d1);
 }
 
-nav.sidebar.navbar.sidebar>.container .navbar-brand,
 .navbar>.container-fluid .navbar-brand {
 	margin-left: 0px;
 }
 
-nav.sidebar,
+#sidebar,
 .main {
 	transition: all 200ms ease-in-out;
 }
 
-nav.sidebar .navbar-brand,
-nav.sidebar .navbar-header {
+#sidebar .navbar-brand,
+#sidebar .navbar-header {
 	width: 100%;
 	text-align: center;
 }
 
-nav.sidebar .navbar-header {
+#sidebar .navbar-header {
 	background-color: var(--color-theme-d3);
 }
 
-nav.sidebar .navbar-header {
+#sidebar .navbar-header {
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 	margin: 0;
 }
 
-nav.sidebar .navbar-header img {
+#sidebar .navbar-header img {
 	margin-top: 10px;
 	height: 75px;
 	width: 75px;
 }
 
 @media (max-width: 990px) {
-	nav.sidebar .navbar-header img {
+	#sidebar .navbar-header img {
 		height: 30px;
 		width: 30px;
 		position: absolute;
@@ -156,33 +170,32 @@ nav.sidebar .navbar-header img {
 	}
 }
 
-nav.sidebar .navbar-nav .open .dropdown-menu {
+#sidebar .navbar-nav .open .dropdown-menu {
 	position: static;
-	float: none;
-	width: auto;
-	margin-top: 0;
+	width: 100%;
 	background-color: transparent;
-	border: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
 	padding: 0;
 }
 
-.sidebar .navbar-nav .open .dropdown-menu>li>a {
+#sidebar .navbar-collapse, #sidebar .container-fluid {
+	padding: 0;
+}
+
+#sidebar .navbar-nav .dropdown.open .dropdown-menu>li>a {
 	color: #CCCCCC;
 }
 
-.sidebar .navbar-nav .open .dropdown-menu>li>a:hover,
-.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+#sidebar .navbar-nav .dropdown.open .dropdown-menu>li>a:hover,
+#sidebar .navbar-nav .dropdown.open .dropdown-menu>li>a:focus {
 	color: #CCCCCC;
-	background-color:  var(--color-theme-d3);
-	background-image: none;
+	background:  var(--color-theme-d1);
 }
 
-nav.sidebar {
+#sidebar .navbar-nav .dropdown.open a {
+	background: var(--color-theme-d3);
+}
+
+#sidebar {
 	width: 250px;
 	height: 100%;
 	margin-left: -210px;
@@ -192,27 +205,27 @@ nav.sidebar {
 }
 
 @media (max-width: 767px) {
-	nav.sidebar {
+	#sidebar {
 		width: 200px;
 		margin-left: -160px;
 	}
 }
 
-nav.sidebar:hover {
+#sidebar:hover {
 	margin-left: 0px;
 }
 
-nav.sidebar li {
+#sidebar li {
 	width: 100%;
 }
 
-nav.sidebar li a {
+#sidebar li a {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
 @media (min-width: 991px) {
-	nav.sidebar {
+	#sidebar {
 		margin-left: 0px;
 	}
 }
@@ -328,7 +341,7 @@ nav.sidebar li a {
 	height: 150px;
 	width: 150px;
 	margin-top: 25px;
-	margin-bottom: 75px;
+	margin-bottom: 25px;
 }
 
 #frm-signup h1 {
@@ -355,6 +368,7 @@ nav.sidebar li a {
 }
 
 .well {
+	min-height: calc(100% - 20px);
 	border-radius: 0;
 	background: #FFFFFF;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
@@ -418,10 +432,6 @@ select + label.control-label {
 select {
 	padding-left: 0;
 	padding-right: 0;
-}
-
-#radio-sexo .btn-primary {
-	
 }
 
 /* End Form */

@@ -56,7 +56,11 @@ function changeColor(color) {
 }
 /* End Change color */
 
+window.onresize = function(event) {
+};
+
 $(document).ready(function () {
+	
 	/* Mask */
 	var phoneBehavior = function(value) {
   		return value.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
@@ -366,4 +370,5 @@ $(document).ready(function () {
 		document.getElementById('icon-pw').style.color = color;
 	});
 	/* End SecurePass */
+	
 });
