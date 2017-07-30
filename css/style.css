@@ -2,14 +2,26 @@
 /* Default custom colors */
 
 :root {
-	--primary-color:  #000033;
-	--secondary-color: #000055;
-	--tertiary-color: #AACCFF;
+	--color-theme-l5: #F2F9FE;
+	--color-theme-l4: #D2EAFD;
+	--color-theme-l3: #A6D4FA;
+	--color-theme-l2: #79BFF8;
+	--color-theme-l1: #4DAAF6;
+	--color-theme-c0: #2196F3;
+	--color-theme-d1: #0C87EB;
+	--color-theme-d2: #0B78D1;
+	--color-theme-d3: #0A69B7;
+	--color-theme-d4: #085A9D;
+	--color-theme-d5: #074B83;
 }
 
 /* End Default custom colors */
 
-/* Selection color */
+body {
+	background-color: #F5F5F5;
+}
+
+/* Selection color *
 
 ::selection {
   background: var(--tertiary-color);
@@ -21,7 +33,7 @@
 
 /* End Selection color */
 
-/* Scrollbar */
+/* Scrollbar *
 
 .main::-webkit-scrollbar-track,
 .navbar::-webkit-scrollbar-track
@@ -53,26 +65,25 @@
 /* Nav */
 
 .navbar {
-	overflow-y: auto;
+	/*overflow-y: auto;*/
 }
 
 .navbar-inverse {
-	background: var(--secondary-color);
+	background: var(--color-theme-d2);
 }
 
+.navbar-inverse .navbar-nav a:hover,
+.navbar-inverse .navbar-nav a:focus,
 .navbar-inverse .navbar-nav .active a,
 .navbar-inverse .navbar-nav .active a:hover,
-.navbar-inverse .navbar-nav .active a:focus,
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-    color: #FFFFFF;
-    background-color:  var(--primary-color);
-	background-image: none;
+.navbar-inverse .navbar-nav .active a:focus {
+	background: var(--color-theme-c0);
+	box-shadow: none;
 }
 
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-    background-color:  var(--primary-color);
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background:  red;
 }
 
 nav.sidebar.navbar {
@@ -85,6 +96,12 @@ nav.sidebar.navbar {
 
 .navbar-inverse .navbar-nav > li > a {
     color: #CCCCCC;
+	text-shadow: none;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    background-color: var(--color-theme-d1);
 }
 
 nav.sidebar.navbar.sidebar>.container .navbar-brand,
@@ -100,34 +117,15 @@ nav.sidebar,
 	transition: margin 200ms ease-out;
 }
 
-nav.sidebar:hover + .main {
-	margin-left: 250px;
-	width: calc(100% - 250px);
-}
-
-@media (max-width: 767px) {
-	nav.sidebar:hover + .main {
-		margin-left: 200px;
-		width: calc(100% - 200px);
-	}
-}
-
-nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
-	text-align: center;
+nav.sidebar .navbar-brand,
+nav.sidebar .navbar-header {
 	width: 100%;
-	margin-left: 0px;
+	text-align: center;
+	background-color: var(--color-theme-d3);
 }
 
-nav.sidebar a {
-	padding-right: 13px;
-}
-
-nav.sidebar .navbar-nav > li:first-child {
-	border-top: 1px #E5E5E5 solid;
-}
-
-nav.sidebar .navbar-nav > li {
-	border-bottom: 1px #E5E5E5 solid;
+nav.sidebar .navbar-header {
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 nav.sidebar .navbar-nav .open .dropdown-menu {
@@ -152,7 +150,7 @@ nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover,
 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
 	color: #CCCCCC;
-	background-color:  var(--primary-color);
+	background-color:  var(--color-theme-d3);
 	background-image: none;
 }
 
@@ -178,6 +176,11 @@ nav.sidebar:hover {
 
 nav.sidebar li {
 	width: 100%;
+}
+
+nav.sidebar li a {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 @media (min-width: 1330px) {
@@ -225,9 +228,8 @@ nav span.glyphicon {
 
 /* Form */
 
-.input-group-addon {
-	color: #FFFFFF;
-	background-color: var(--secondary-color);
+.form-group {
+	margin-bottom: 50px;
 }
 
 .form-control option:hover {
@@ -293,3 +295,48 @@ nav span.glyphicon {
 }
 
 /* End Form */
+
+.well {
+	border-radius: 0;
+	background: #FFFFFF;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.form-control {
+	padding-left: 0;
+	padding-right: 0;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #9E9E9E;
+	box-shadow: none;
+	transition: all .2s ease-in-out;
+}
+
+.form-control:focus {
+	border-bottom: 1px solid var(--color-theme-d3);
+    box-shadow: 0 1px 0 0 var(--color-theme-d3);
+}
+
+label.control-label {
+  	position: absolute;
+	color: #888;
+	cursor: text;
+	top: .8rem;
+	transition: all .25s ease-in-out;
+}
+
+:focus + label.control-label {
+	font-size: 12px;
+  	color: var(--color-theme-d3);
+  	top: -1rem;
+}
+
+select + label.control-label {
+  	top: -1rem;
+	left: .3rem;
+}
+
+select {
+	padding-left: 0;
+	padding-right: 0;
+}
