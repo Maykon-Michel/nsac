@@ -543,10 +543,6 @@ th {
 	padding: 3px 0;
 }
 
-th {
-	text-align: center;
-}
-
 .panel-group .panel + .panel {
     margin-top: 0;
 }
@@ -690,6 +686,82 @@ th {
 }
 
 /* End Panel tabs */
+
+/* Carousel */
+
+#custom_carousel .item {
+    color: #000;
+    background-color: white;
+    padding: 20px 0;
+}
+
+#custom_carousel .controls {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    background: #ddd;
+}
+
+#custom_carousel .controls li {
+    display: table-cell;
+    width: 1%;
+    max-width: 90px
+}
+
+#custom_carousel .controls li.active {
+    background-color: #eee;
+    border-top: 3px solid #428bca;
+}
+
+#custom_carousel .controls a small {
+    overflow: hidden;
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: bold
+}
+
+#custom_carousel2 .item {
+    color: #000;
+    background-color: white;
+    padding: 20px 0;
+}
+
+#custom_carousel2 .controls {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    background: #ddd;
+}
+
+#custom_carousel2 .controls li {
+    display: table-cell;
+    width: 1%;
+    max-width: 90px
+}
+
+#custom_carousel2 .controls li.active {
+    background-color: #eee;
+    border-top: 3px solid #428bca;
+}
+
+#custom_carousel2 .controls a small {
+    overflow: hidden;
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: bold
+}
+
+/* End Carousel */
 
 /* Feature card */
 
