@@ -1,4 +1,5 @@
 
+/* Change color */
 function changeColor(color) {
 	switch(color) {
 		case 'blue':
@@ -21,6 +22,7 @@ function changeColor(color) {
 	document.body.style.setProperty('--secondary-color', secondary_color);
 	document.body.style.setProperty('--tertiary-color', tertiary_color);
 }
+/* End Change color */
 
 $(document).ready(function () {
 	/* Mask */
