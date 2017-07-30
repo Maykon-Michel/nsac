@@ -38,7 +38,7 @@ function drawMediaBimestralGeralChart() {
 		.draw(data, options);
 }
 
-function drawMediaBimestralChart(materia) {
+function drawMediaBimestralChart(materia, divWidth) {
 	var data = new google.visualization.DataTable();
 	data.addColumn('string', '');
 	data.addColumn('number', 'Média bimestral');
@@ -54,7 +54,7 @@ function drawMediaBimestralChart(materia) {
 	]);
 	
 	var options = {
-		height: 300,
+		width: divWidth,
 		vAxis: {
 			viewWindowMode : 'explicit',
 			viewWindow: {
@@ -71,9 +71,31 @@ function drawMediaBimestralChart(materia) {
 		.draw(data, options);
 }
 
+function initializeChart(materia) {
+	var div = $('.panel-heading[data-toggle="collapse"][href="#'+materia+'"]');
+	div.click(function() {
+		drawMediaBimestralChart(materia, div.width());
+	});
+}
+
 $(document).ready(function() {	
 	google.charts.load("current", {'packages':['corechart', 'bar']});
 	google.charts.setOnLoadCallback(drawMediaBimestralGeralChart);
-	google.charts.setOnLoadCallback(function() { return drawMediaBimestralChart('7367b'); });
-    google.charts.setOnLoadCallback(function() { return drawMediaBimestralChart('7369b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('7367b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('7369b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('7376b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('7377b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('7378b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('7382b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8301b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8302b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8303b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8304b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8305b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8306b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8307b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8308b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8312b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8316b'); });
+	google.charts.setOnLoadCallback(function() { return initializeChart('8317b'); });
 });
