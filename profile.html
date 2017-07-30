@@ -88,14 +88,14 @@
         	<!-- Signup Form -->
             <form action="signup.php" method="post" class="well" id="frm-signup" role="form">
                 <fieldset>
-                    <legend>Inscrever-se</legend>
+                	<legend>Dados pessoais</legend>
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="form-group col-md-6">
-                            <label class="col-md-3 control-label sr-only">Nome completo</label>
+                            <label class="col-md-3 control-label sr-only">Nome</label>
                             <div class="input-group">
-                                <label for="full_name" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
-                                <input type="text" placeholder="Nome completo*" name="full_name" id="full_name" class="form-control">
+                                <label for="nome" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
+                                <input type="text" placeholder="Nome*" name="nome" id="nome" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <!--div class="row">
                         <div class="col-md-3"></div>
                         <div class="form-group col-md-6">
                             <label class="col-md-3 control-label sr-only">Senha</label>
@@ -119,17 +119,7 @@
                                 <label for="password" class="input-group-addon" id="icon-pw"><i class="glyphicon glyphicon-dashboard"></i></label>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
-                            <label class="col-md-3 control-label sr-only">C.P.F. ou C.N.P.J.</label>
-                            <div class="input-group">
-                                <label for="cpfCnpj" class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></label>
-                                <input type="text" maxlength="18" placeholder="C.P.F. ou C.N.P.J.*" name="cpfCnpj" id="cpfCnpj" class="form-control">
-                            </div>
-                        </div>
-                    </div>
+                    </div-->
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="form-group col-md-6">
@@ -143,10 +133,103 @@
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="form-group col-md-6">
-                            <label class="col-md-3 control-label sr-only">C.E.P.</label>
+                            <label class="col-md-3 control-label sr-only">Celular</label>
                             <div class="input-group">
-                                <label for="zipCode" class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></label>
-                                <input type="text" placeholder="C.E.P.*" name="zipCode" id="zipCode" class="form-control">
+                                <label for="cellphone" class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></label>
+                                <input type="text" maxlength="15" placeholder="Celular*" name="cellphone" id="cellphone" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            <label class="col-md-3 control-label sr-only">Nome do pai</label>
+                            <div class="input-group">
+                                <label for="nome_pai" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
+                                <input type="text" placeholder="Nome do pai*" name="nome_pai" id="nome_pai" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            <label class="col-md-3 control-label sr-only">Nome da mãe</label>
+                            <div class="input-group">
+                                <label for="nome_mae" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
+                                <input type="text" placeholder="Nome da mãe*" name="nome_mae" id="nome_mae" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="form-group col-sm-9 col-md-4">
+                            <label class="col-md-3 control-label sr-only">Cidade nascimento</label>
+                            <div class="input-group">
+                                <label for="city_nasc" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
+                                <select name="city_nasc" id="city_nasc" class="form-control">
+                                    <option value="city" label="Cidade*" selected hidden></option>
+                                    <option value="Bariri" label="Bariri"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3 col-md-2">
+                            <label class="col-md-3 control-label sr-only">U.F. nascimento</label>
+                            <div class="input-group">
+                                <label for="uf_nasc" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
+                                <select name="uf_nasc" id="uf_nasc" class="form-control">
+                                    <option value="uf" label="U.F.*" selected hidden></option>
+                                    <option value="SP" label="SP"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            <label class="col-md-3 control-label sr-only">R.G.</label>
+                            <div class="input-group">
+                                <label for="cpf" class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></label>
+                                <input type="text" maxlength="14" placeholder="C.P.F." name="cpf" id="cpf" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <legend>Dados de Endereço</legend>
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="form-group col-sm-9 col-md-4">
+                            <label class="col-md-3 control-label sr-only">Logradouro</label>
+                            <div class="input-group">
+                                <label for="street" class="input-group-addon"><i class="glyphicon glyphicon-road"></i></label>
+                                <input type="text" placeholder="Logradouro*" name="street" id="street" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3 col-md-2">
+                            <label class="col-md-3 control-label sr-only">Número</label>
+                            <div class="input-group">
+                                <label for="number" class="input-group-addon"><i class="glyphicon glyphicon-pushpin"></i></label>
+                                <input type="text" placeholder="N&ordm;.*" name="number" id="number" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            <label for="" class="col-md-3 control-label sr-only">Complemento</label>
+                            <div class="input-group">
+                                <label for="complement" class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></label>
+                                <input type="text" placeholder="Complemento" name="complement" id="complement" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            <label for="" class="col-md-3 control-label sr-only">Bairro</label>
+                            <div class="input-group">
+                                <label for="neighborhood" class="input-group-addon"><i class="glyphicon glyphicon-home"></i></label>
+                                <input type="text" placeholder="Bairro*" name="neighborhood" id="neighborhood" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -174,50 +257,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
-                            <label for="" class="col-md-3 control-label sr-only">Bairro</label>
-                            <div class="input-group">
-                                <label for="neighborhood" class="input-group-addon"><i class="glyphicon glyphicon-home"></i></label>
-                                <input type="text" placeholder="Bairro*" name="neighborhood" id="neighborhood" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                        </div>
-                        <div class="form-group col-sm-9 col-md-4">
-                            <label class="col-md-3 control-label sr-only">Logradouro</label>
-                            <div class="input-group">
-                                <label for="street" class="input-group-addon"><i class="glyphicon glyphicon-road"></i></label>
-                                <input type="text" placeholder="Logradouro*" name="street" id="street" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-3 col-md-2">
-                            <label class="col-md-3 control-label sr-only">Número</label>
-                            <div class="input-group">
-                                <label for="number" class="input-group-addon"><i class="glyphicon glyphicon-pushpin"></i></label>
-                                <input type="text" placeholder="N&ordm;.*" name="number" id="number" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="form-group col-md-6">
-                            <label for="" class="col-md-3 control-label sr-only">Bairro</label>
-                            <div class="input-group">
-                                <label for="complement" class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></label>
-                                <input type="text" placeholder="Complemento" name="complement" id="complement" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
+                    <!--div class="row">
                         <div class="col-xs-4 col-md-5"></div>
                         <div class="col-xs-4 col-md-2">
                             <input type="submit" value="Inscrever-se" class="form-control">
                         </div>
-                    </div>
+                    </div-->
                 </fieldset>
             </form>
             <!-- End Signup Form -->
