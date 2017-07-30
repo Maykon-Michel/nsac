@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08b61151-34ec-4568-ae3e-2c460cba1ef3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login.html" afterPath="$PROJECT_DIR$/pages/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501420007167</updated>
-      <workItem from="1501420008887" duration="2565000" />
+      <workItem from="1501420008887" duration="2591000" />
     </task>
     <task id="LOCAL-00001" summary="1.17.04.29.0">
       <created>1501420126679</created>
@@ -298,11 +300,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501422582593</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="1.17.05.30.0">
+      <created>1501422604413</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1501422604413</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2565000" />
+    <option name="totallyTimeSpent" value="2591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="417" width="1378" height="314" extended-state="0" />
@@ -354,7 +363,8 @@
     <MESSAGE value="1.17.05.26.0" />
     <MESSAGE value="1.17.05.27.0" />
     <MESSAGE value="1.17.05.29.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.17.05.29.0" />
+    <MESSAGE value="1.17.05.30.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.17.05.30.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

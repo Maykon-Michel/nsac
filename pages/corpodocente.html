@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+    	<title>NSAC</title>
+
+    	<!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../img/favicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/bootstrap-theme.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Javascript -->
+        <script src="../js/jquery-3.2.1.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/corpodocente.js"></script>
+
+    </head>
+    <body>
+
+      <!-- Modal -->
+      <div id="modalEmail" class="modal fade">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Contato</h4>
+            </div>
+            <div class="modal-body">
+              <form id="emailForm" action="#" method="post">
+                asuhdasuh
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<nav class="navbar navbar-inverse navbar-fixed-top sidebar" id="sidebar" role="navigation">
+					<div class="container-fluid">
+							<div class="navbar-header">
+								<img src="../imgs/1557006/avatar.jpg" alt="" class="img-circle">
+									<span class="navbar-brand">Johana de Santis</span>
+							</div>
+							<div>
+									<ul class="nav navbar-nav">
+											<li>
+												<a href="index.html">
+														Pagina inicial<span class="glyphicon glyphicon-home" />
+													</a>
+											</li>
+											<li>
+												<a href="boletim.html">
+														Boletim<span class="glyphicon glyphicon-education" />
+													</a>
+											</li>
+											<li class="active">
+												<a href="corpodocente.html">
+														Corpo Docente<span class="glyphicon glyphicon-apple" />
+													</a>
+											</li>
+											<li>
+												<a href="graficos.html">
+														Gráficos<span class="glyphicon glyphicon-stats" />
+													</a>
+											</li>
+											<li>
+												<a href="mural.html">
+														Mural<span class="glyphicon glyphicon-list-alt" />
+													</a>
+											</li>
+											<li>
+												<a href="ocorrencias.html">
+														Ocorrências<span class="glyphicon glyphicon-alert" />
+													</a>
+											</li>
+											<li>
+												<a href="perfil.html">
+														Perfil<span class="glyphicon glyphicon-user" />
+													</a>
+											</li>
+											<li class="dropdown">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+														Temas <span class="caret"></span><span class="glyphicon glyphicon-tint"></span>
+													</a>
+													<ul class="dropdown-menu" role="menu">
+															<li><a href="#" onClick="changeColor('blue')">Azul</a></li>
+															<li><a href="#" onClick="changeColor('gray')">Cinza</a></li>
+															<li><a href="#" onClick="changeColor('purple')">Roxo</a></li>
+													</ul>
+											</li>
+									</ul>
+							</div>
+					</div>
+			</nav>
+        <div class="header">
+            Home
+            <a href="#">Sair</a>
+        </div>
+        <div class="main">
+        	<div class="well">
+            <table class="table-hover container-fluid table-docente table-striped visible-sm visible-md visible-lg">
+              <thead>
+                <tr>
+                  <th class="col-sm-7">Professor</th>
+                  <th class="col-sm-5">E-mail</th>
+                  <th class="col-sm-2">Comunicar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-sm-7">Ariane</td>
+                  <td class="col-sm-5">ariane@gmail.com</td>
+                  <td class="col-sm-2"><button type="button" onClick="sendEmailTo('ariane@gmail.com')" class="btn btn-success btn-block"><span class="glyphicon glyphicon-share-alt btn-block"></span></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>>
+    </body>
+</html>
