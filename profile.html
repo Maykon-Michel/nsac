@@ -81,9 +81,14 @@
         <div class="main">
         	<!-- Signup Form -->
             <form action="signup.php" method="post" class="well" id="frm-signup" role="form">
-                <img src="imgs/1557006/avatar.jpg" alt="" class="img-circle pull-right">
                 <fieldset>
                 	<legend>Dados pessoais</legend>
+                	<div class="row">
+                    	<div class="col-md-3"></div>
+                        <div class="col-md-6">
+                        	<img src="imgs/1557006/avatar.jpg" alt="" class="img-circle">
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="form-group col-md-6">
@@ -153,7 +158,7 @@
                                     name="phone"
                                     id="phone"
                                     class="form-control"
-                                    value="(14) 98160-6357"
+                                    value="(14) 3662-6357"
                                     disabled>
                             </div>
                         </div>
@@ -170,6 +175,7 @@
                                 	name="cellphone"
                                     id="cellphone"
                                     class="form-control"
+                                    value="(14) 98160-6592"
                                     disabled>
                             </div>
                         </div>
@@ -185,6 +191,7 @@
                                     name="nome_pai"
                                     id="nome_pai"
                                     class="form-control"
+                                    value="Gessé da Silva"
                                     disabled>
                             </div>
                         </div>
@@ -200,30 +207,46 @@
                                     name="nome_mae"
                                     id="nome_mae"
                                     class="form-control"
+                                    value="Silvia Fonseca"
                                     disabled>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3">
+                    	<div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                        	<label class="input-group-addon control-label sr-only">Data de nascimento</label>
+                            <div class="input-group">
+                            	<label for="data_de_nascimento" class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></label>
+                                <input type="text"
+                                	placeholder="Data de nascimento*"
+                                    name="data_de_nascimento"
+                                    id="data_de_nascimento"
+                                    class="form-control"
+                                    value="12/10/2000"
+                                    disabled>
+                            </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
                         <div class="form-group col-sm-9 col-md-4">
                             <label class="col-md-3 control-label sr-only">Cidade nascimento</label>
                             <div class="input-group">
-                                <label for="city_nasc" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                                <select name="city_nasc" id="city_nasc" class="form-control" disabled>
-                                    <option value="city" label="Cidade*" selected hidden></option>
-                                    <option value="Bariri" label="Bariri"></option>
+                                <label for="cidade_nascimento" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
+                                <select name="cidade_nascimento" id="cidade_nascimento" class="form-control" disabled>
+                                    <option value="cidade_nascimento" label="Cidade de Nascimento*" hidden></option>
+                                    <option value="Bauru" label="Bauru" selected></option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group col-sm-3 col-md-2">
                             <label class="col-md-3 control-label sr-only">U.F. nascimento</label>
                             <div class="input-group">
-                                <label for="uf_nasc" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                                <select name="uf_nasc" id="uf_nasc" class="form-control" disabled>
-                                    <option value="uf" label="U.F.*" selected hidden></option>
-                                    <option value="SP" label="SP"></option>
+                                <label for="uf_nascimento" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
+                                <select name="uf_nascimento" id="uf_nascimento" class="form-control" disabled>
+                                    <option value="uf" label="U.F.*" hidden></option>
+                                    <option value="SP" label="SP" selected></option>
                                 </select>
                             </div>
                         </div>
@@ -233,13 +256,30 @@
                         <div class="form-group col-md-6">
                             <label class="col-md-3 control-label sr-only">R.G.</label>
                             <div class="input-group">
-                                <label for="cpf" class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></label>
+                                <label for="rg" class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></label>
                                 <input type="text"
-                                	maxlength="14"
-                                    placeholder="C.P.F."
-                                    name="cpf"
-                                    id="cpf"
+                                	maxlength="12"
+                                    placeholder="R.G.*"
+                                    name="rg"
+                                    id="rg"
                                     class="form-control"
+                                    value="47.747.706-x"
+                                    disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                        	<label class="input-group-addon control-label sr-only">Emissão do R.G.</label>
+                            <div class="input-group">
+                            	<label for="data_de_nascimento" class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></label>
+                                <input type="text"
+                                	placeholder="Emissão do R.G.*"
+                                    name="emissao_do_rg"
+                                    id="emissao_do_rg"
+                                    class="form-control"
+                                    value="10/12/2013"
                                     disabled>
                             </div>
                         </div>
