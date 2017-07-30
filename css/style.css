@@ -555,6 +555,7 @@ th {
 
 .panel-primary {
 	border-color: var(--color-theme-d1);
+	border-bottom-color: #FFFFFF;
 }
 
 .panel-primary > .panel-heading {
