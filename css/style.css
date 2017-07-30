@@ -94,6 +94,16 @@ body {
 
 #sidebar {
 	overflow-y: auto;
+	width: 250px;
+	height: 100%;
+	margin-left: -210px;
+	float: left;
+	z-index: 99999;
+	margin-bottom: 0px;
+}
+
+#sidebar:hover {
+	margin-left: 0px;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -222,19 +232,6 @@ body {
 	background: var(--color-theme-d3);
 }
 
-#sidebar {
-	width: 250px;
-	height: 100%;
-	margin-left: -210px;
-	float: left;
-	z-index: 99999;
-	margin-bottom: 0px;
-}
-
-#sidebar:hover {
-	margin-left: 0px;
-}
-
 #sidebar li {
 	width: 100%;
 }
@@ -272,7 +269,13 @@ h1.navbar-brand {
 /* Login Sidebar */
 
 [login] #sidebar {
+	outline: none;
 	margin-left: -250px;
+}
+
+[login] #sidebar:hover,
+[login] #sidebar:focus {
+	margin-left: 0px;
 }
 
 @media (min-width: 992px) {
@@ -306,14 +309,10 @@ h1.navbar-brand {
 	}
 }
 
-.header a {
+.header span {
 	color: #FFFFFF;
 	float: right;
-}
-
-.header a:hover,
-.header a:focus {
-	text-decoration: none;
+	cursor: pointer;
 }
 
 /* End Header */
@@ -516,6 +515,7 @@ select {
 #frm-login .form-control {
 	margin-top: 25px;
 	border-radius: 5px;
+	border: none;
 }
 
 #frm-login [type="text"].form-control {

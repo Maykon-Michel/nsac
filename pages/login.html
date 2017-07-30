@@ -21,29 +21,53 @@
         <script src="../js/jquery-3.2.1.js"></script>
         <script src="../js/bootstrap.js"></script>
         <script src="../js/scripts.js"></script>
-        <script src="../js/login.js"></script>
         
     </head>
     <body login>
     	
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar" role="navigation" tabindex="-1">
             <div class="navbar-header">
                 <h1 class="navbar-brand">Login</h1>
             </div>
             <div class="container-fluid">
             	<form action="login.html" method="" id="frm-login">
-                	<input type="text" class="form-control" placeholder="R.A.">
-                	<input type="text" class="form-control" placeholder="Senha">
+                	<input type="text" class="form-control" id="ra" placeholder="R.A.">
+                	<input type="text" class="form-control" id="senha" placeholder="Senha">
                     <input type="submit" class="form-control" value="Entrar">
                 </form>
             </div>
         </nav>
         <div class="header">
             NSAC
-            <a onClick="openSidebar()">Login</a>
+            <span class="visible-xs visible-sm" onClick="$('#sidebar').focus()">Login</span>
         </div>
         <div class="main">
         	<div class="well">
+            	<script type="text/javascript">
+				  google.charts.load('current', {'packages':['bar']});
+				  google.charts.setOnLoadCallback(drawChart);
+			
+				  function drawChart() {
+					var data = google.visualization.arrayToDataTable([
+					  ['Year', 'Sales', 'Expenses', 'Profit'],
+					  ['2014', 1000, 400, 200],
+					  ['2015', 1170, 460, 250],
+					  ['2016', 660, 1120, 300],
+					  ['2017', 1030, 540, 350]
+					]);
+			
+					var options = {
+					  chart: {
+						title: 'Company Performance',
+						subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+					  }
+					};
+			
+					var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+			
+					chart.draw(data, google.charts.Bar.convertOptions(options));
+				  }
+				</script>
             </div>
         </div>
         
