@@ -455,6 +455,25 @@ select {
 	padding-right: 0;
 }
 
+.avatar .glyphicon {
+	cursor: pointer;
+	position: relative;
+    top: 115px;
+    font-size: 20px;
+    background-color: var(--color-theme-d3);
+    border-radius: 50%;
+    padding: 10px;
+    color: #fff;
+}
+
+.avatar .glyphicon-camera {
+    left: 115px;
+}
+
+.avatar .glyphicon-remove {
+    right: 50px;
+}
+
 /* End Form */
 
 /* Report card */
