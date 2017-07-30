@@ -28,19 +28,13 @@
         <nav class="navbar navbar-inverse navbar-fixed-top sidebar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="index.html">
                     	NSAC<span class="glyphicon glyphicon-apple" />
                     </a>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <div>
                     <ul class="nav navbar-nav">
-                        <li>
+                        <li class="active">
                         	<a href="#">
                             	Boletim<span class="glyphicon glyphicon-education" />
                             </a>
@@ -65,7 +59,7 @@
                             	Ocorrências<span class="glyphicon glyphicon-alert" />
                             </a>
                         </li>
-                        <li class="active">
+                        <li>
                         	<a href="#">
                             	Perfil<span class="glyphicon glyphicon-user" />
                             </a>
@@ -96,6 +90,20 @@
                             <div class="input-group">
                                 <label for="nome" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
                                 <input type="text" placeholder="Nome*" name="nome" id="nome" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-md-3"></div>
+                        <div class="form-group col-md-6">
+                            <label class="col-md-3 control-label sr-only">Sexo</label>
+                            <div class="input-group">
+                                <label for="sexo" class="input-group-addon"><i class="glyphicon glyphicon-heart"></i></label>
+                                <select name="sexo" id="sexo" class="form-control">
+                                    <option value="city" label="Sexo*" selected hidden></option>
+                                    <option value="m" label="Masculino"></option>
+                                    <option value="f" label="Feminino"></option>
+                                </select>
                             </div>
                         </div>
                     </div>
