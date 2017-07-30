@@ -34,7 +34,7 @@
                 </div>
                 <div>
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li>
                         	<a href="#">
                             	Boletim<span class="glyphicon glyphicon-education" />
                             </a>
@@ -59,7 +59,7 @@
                             	Ocorrências<span class="glyphicon glyphicon-alert" />
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                         	<a href="#">
                             	Perfil<span class="glyphicon glyphicon-user" />
                             </a>
@@ -69,9 +69,9 @@
                             	Temas <span class="caret"></span><span class="glyphicon glyphicon-tint"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Azul</a></li>
-                                <li><a href="#">Cinza</a></li>
-                                <li><a href="#">Roxo</a></li>
+                                <li><a href="#" onClick="changeColor('blue')">Azul</a></li>
+                                <li><a href="#" onClick="changeColor('gray')">Cinza</a></li>
+                                <li><a href="#" onClick="changeColor('purple')">Roxo</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -89,7 +89,7 @@
                             <label class="col-md-3 control-label sr-only">Nome</label>
                             <div class="input-group">
                                 <label for="nome" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
-                                <input type="text" placeholder="Nome*" name="nome" id="nome" class="form-control">
+                                <input type="text" placeholder="Nome*" name="nome" id="nome" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                             <label class="col-md-3 control-label sr-only">Sexo</label>
                             <div class="input-group">
                                 <label for="sexo" class="input-group-addon"><i class="glyphicon glyphicon-heart"></i></label>
-                                <select name="sexo" id="sexo" class="form-control">
+                                <select name="sexo" id="sexo" class="form-control" disabled>
                                     <option value="city" label="Sexo*" selected hidden></option>
                                     <option value="m" label="Masculino"></option>
                                     <option value="f" label="Feminino"></option>
@@ -113,7 +113,7 @@
                             <label class="col-md-3 control-label sr-only">Email</label>
                             <div class="input-group">
                                 <label for="email" class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></label>
-                                <input type="text" placeholder="Email*" name="email" id="email" class="form-control">
+                                <input type="text" placeholder="Email*" name="email" id="email" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                             <label class="col-md-3 control-label sr-only">Telefone</label>
                             <div class="input-group">
                                 <label for="phone" class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></label>
-                                <input type="text" maxlength="15" placeholder="Telefone*" name="phone" id="phone" class="form-control">
+                                <input type="text" maxlength="15" placeholder="Telefone*" name="phone" id="phone" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                             <label class="col-md-3 control-label sr-only">Celular</label>
                             <div class="input-group">
                                 <label for="cellphone" class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></label>
-                                <input type="text" maxlength="15" placeholder="Celular*" name="cellphone" id="cellphone" class="form-control">
+                                <input type="text" maxlength="15" placeholder="Celular*" name="cellphone" id="cellphone" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                             <label class="col-md-3 control-label sr-only">Nome do pai</label>
                             <div class="input-group">
                                 <label for="nome_pai" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
-                                <input type="text" placeholder="Nome do pai*" name="nome_pai" id="nome_pai" class="form-control">
+                                <input type="text" placeholder="Nome do pai*" name="nome_pai" id="nome_pai" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                             <label class="col-md-3 control-label sr-only">Nome da mãe</label>
                             <div class="input-group">
                                 <label for="nome_mae" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
-                                <input type="text" placeholder="Nome da mãe*" name="nome_mae" id="nome_mae" class="form-control">
+                                <input type="text" placeholder="Nome da mãe*" name="nome_mae" id="nome_mae" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                             <label class="col-md-3 control-label sr-only">Cidade nascimento</label>
                             <div class="input-group">
                                 <label for="city_nasc" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                                <select name="city_nasc" id="city_nasc" class="form-control">
+                                <select name="city_nasc" id="city_nasc" class="form-control" disabled>
                                     <option value="city" label="Cidade*" selected hidden></option>
                                     <option value="Bariri" label="Bariri"></option>
                                 </select>
@@ -185,7 +185,7 @@
                             <label class="col-md-3 control-label sr-only">U.F. nascimento</label>
                             <div class="input-group">
                                 <label for="uf_nasc" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                                <select name="uf_nasc" id="uf_nasc" class="form-control">
+                                <select name="uf_nasc" id="uf_nasc" class="form-control" disabled>
                                     <option value="uf" label="U.F.*" selected hidden></option>
                                     <option value="SP" label="SP"></option>
                                 </select>
@@ -198,7 +198,7 @@
                             <label class="col-md-3 control-label sr-only">R.G.</label>
                             <div class="input-group">
                                 <label for="cpf" class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></label>
-                                <input type="text" maxlength="14" placeholder="C.P.F." name="cpf" id="cpf" class="form-control">
+                                <input type="text" maxlength="14" placeholder="C.P.F." name="cpf" id="cpf" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -210,14 +210,14 @@
                             <label class="col-md-3 control-label sr-only">Logradouro</label>
                             <div class="input-group">
                                 <label for="street" class="input-group-addon"><i class="glyphicon glyphicon-road"></i></label>
-                                <input type="text" placeholder="Logradouro*" name="street" id="street" class="form-control">
+                                <input type="text" placeholder="Logradouro*" name="street" id="street" class="form-control" disabled>
                             </div>
                         </div>
                         <div class="form-group col-sm-3 col-md-2">
                             <label class="col-md-3 control-label sr-only">Número</label>
                             <div class="input-group">
                                 <label for="number" class="input-group-addon"><i class="glyphicon glyphicon-pushpin"></i></label>
-                                <input type="text" placeholder="N&ordm;.*" name="number" id="number" class="form-control">
+                                <input type="text" placeholder="N&ordm;.*" name="number" id="number" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -227,7 +227,7 @@
                             <label for="" class="col-md-3 control-label sr-only">Complemento</label>
                             <div class="input-group">
                                 <label for="complement" class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></label>
-                                <input type="text" placeholder="Complemento" name="complement" id="complement" class="form-control">
+                                <input type="text" placeholder="Complemento" name="complement" id="complement" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -237,7 +237,7 @@
                             <label for="" class="col-md-3 control-label sr-only">Bairro</label>
                             <div class="input-group">
                                 <label for="neighborhood" class="input-group-addon"><i class="glyphicon glyphicon-home"></i></label>
-                                <input type="text" placeholder="Bairro*" name="neighborhood" id="neighborhood" class="form-control">
+                                <input type="text" placeholder="Bairro*" name="neighborhood" id="neighborhood" class="form-control" disabled>
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
                             <label class="col-md-3 control-label sr-only">Cidade</label>
                             <div class="input-group">
                                 <label for="city" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                                <select name="city" id="city" class="form-control">
+                                <select name="city" id="city" class="form-control" disabled>
                                     <option value="city" label="Cidade*" selected hidden></option>
                                     <option value="Bariri" label="Bariri"></option>
                                 </select>
@@ -258,7 +258,7 @@
                             <label class="col-md-3 control-label sr-only">U.F.</label>
                             <div class="input-group">
                                 <label for="uf" class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                                <select name="uf" id="uf" class="form-control">
+                                <select name="uf" id="uf" class="form-control" disabled>
                                     <option value="uf" label="U.F.*" selected hidden></option>
                                     <option value="SP" label="SP"></option>
                                 </select>
