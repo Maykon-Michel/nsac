@@ -3,64 +3,70 @@ $(window).resize(function(){
   drawMediaBimestralGeralChart();
 });
 
-function drawMediaBimestralGeralChart(mb, mt) {
+function drawMediaBimestralGeralChart() {
 	var data = new google.visualization.DataTable();
 	data.addColumn('string', '');
 	data.addColumn('number', 'Média bimestral');
 	data.addColumn('number', 'Média da turma');
 	data.addRows([
-		['1 Bimetre', 1, 2],
-		['2 Bimetre', 1, 2],
-		['3 Bimetre', 1, 4], 
-		['4 Bimetre', 1, 2],
-		['Média Final', 2, 1]
+		['1 Bimetre', 6.8, 7.0],
+		['2 Bimetre', 7.5, 7.5],
+		['3 Bimetre', 7.2, 6.3], 
+		['4 Bimetre', 6.3, 6.8],
+		['Média Final', 7.0, 6.9]
 	]);
 
-        var options = {
-          chart: {
-            title: 'Company Performance',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-          }
-        };
+	var options = {
+		chart: {
+			title: 'Média Bimestral Geral',
+			subtitle: 'Soma de todas as médias gerais dividido pela quantidade de matérias',
+		},
+        vAxis: {
+			viewWindowMode : 'explicit',
+			viewWindow: {
+				min: 0,
+				max: 10
+			}
+		}
+	};
+	new google.charts.Bar(document.getElementById('mbg'))
+		.draw(data, google.charts.Bar.convertOptions(options));
+}
 
-        var chart = new google.charts.Bar(document.getElementById('media_bimestral_geral'));
+function drawMediaBimestralChart() {
+	var data = new google.visualization.DataTable();
+	data.addColumn('string', '');
+	data.addColumn('number', 'Média bimestral');
+	data.addRows([
+		['1 Bimetre', 6.8],
+		['2 Bimetre', 7.5],
+		['3 Bimetre', 7.2], 
+		['4 Bimetre', 6.3],
+		['Média Final', 7.0]
+	]);
 
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
+	var options = {
+		chart: {
+			title: 'Gestão de Negócios II'
+		},
+		height: 300,
+        vAxis: {
+			viewWindowMode : 'explicit',
+			viewWindow: {
+				min: 0,
+				max: 10
+			}
+		},
+		legend: {
+			position: 'none'
+		}
+	};
+	new google.charts.Bar(document.getElementById('7367b'))
+		.draw(data, google.charts.Bar.convertOptions(options));
+}
 
 $(document).ready(function() {	
-	 // Load Charts and the corechart package.
-      google.charts.load('current', {'packages':['corechart', 'bar']});
-
-      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawMediaBimestralGeralChart);
-
-      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
-      google.charts.setOnLoadCallback(drawAnthonyChart);
-
-      // Callback that draws the pie chart for Sarah's pizza.
-      
-
-      // Callback that draws the pie chart for Anthony's pizza.
-      function drawAnthonyChart() {
-
-        // Create the data table for Anthony's pizza.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 2],
-          ['Onions', 2],
-          ['Olives', 2],
-          ['Zucchini', 0],
-          ['Pepperoni', 3]
-        ]);
-
-        // Set options for Anthony's pie chart.
-        var options = {title:'How Much Pizza Anthony Ate Last Night'};
-
-        // Instantiate and draw the chart for Anthony's pizza.
-        var chart = new google.visualization.PieChart(document.getElementById('gestao_de_negocios_ii'));
-        chart.draw(data, options);
-      }
+      google.charts.setOnLoadCallback(function() {return drawMediaBimestralChart('7367b'); });
 });

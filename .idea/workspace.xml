@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08b61151-34ec-4568-ae3e-2c460cba1ef3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/boletim.js" afterPath="$PROJECT_DIR$/js/boletim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/graficos.html" afterPath="$PROJECT_DIR$/pages/graficos.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -102,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501420007167</updated>
-      <workItem from="1501420008887" duration="2486000" />
+      <workItem from="1501420008887" duration="2508000" />
     </task>
     <task id="LOCAL-00001" summary="1.17.04.29.0">
       <created>1501420126679</created>
@@ -272,11 +270,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501422458994</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1.17.05.25.0">
+      <created>1501422523497</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1501422523497</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2486000" />
+    <option name="totallyTimeSpent" value="2508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="417" width="1378" height="314" extended-state="0" />
@@ -324,7 +329,8 @@
     <MESSAGE value="1.17.05.20.0" />
     <MESSAGE value="1.17.05.22.0" />
     <MESSAGE value="1.17.05.23.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.17.05.23.0" />
+    <MESSAGE value="1.17.05.25.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.17.05.25.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

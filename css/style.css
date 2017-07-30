@@ -572,3 +572,12 @@ th {
 }
 
 /* Report card */
+
+/* Graphs */
+
+#mbg {
+	height: 500px;
+	margin-bottom: 50px;
+}
+
+/* End Graphs */
