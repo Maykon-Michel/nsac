@@ -21,29 +21,29 @@
         <script src="../js/jquery-3.2.1.js"></script>
         <script src="../js/bootstrap.js"></script>
         <script src="../js/scripts.js"></script>
+        <script src="../js/login.js"></script>
         
     </head>
-    <body>
+    <body login>
     	
-        <nav class="navbar navbar-inverse navbar-fixed-top sidebar" id="sidebar" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar" role="navigation">
             <div class="navbar-header">
                 <h1 class="navbar-brand">Login</h1>
             </div>
             <div class="container-fluid">
-            	<form action="login.html" method="">
-                	<input type="text" class="form-control">
-                	<input type="text" class="form-control">
-                    <input type="submit" class="form-control">
+            	<form action="login.html" method="" id="frm-login">
+                	<input type="text" class="form-control" placeholder="R.A.">
+                	<input type="text" class="form-control" placeholder="Senha">
+                    <input type="submit" class="form-control" value="Entrar">
                 </form>
             </div>
         </nav>
         <div class="header">
             NSAC
-            <a href="#">Sair</a>
+            <a onClick="openSidebar()">Login</a>
         </div>
         <div class="main">
         	<div class="well">
-            	
             </div>
         </div>
         

@@ -269,6 +269,20 @@ h1.navbar-brand {
 
 /* End Sidebar */
 
+/* Login Sidebar */
+
+[login] #sidebar {
+	margin-left: -250px;
+}
+
+@media (min-width: 992px) {
+	[login] #sidebar {
+		margin-left: 0px;
+	}
+}
+
+/* End Login Sidebar */
+
 /* Header */
 
 .header {
@@ -304,6 +318,20 @@ h1.navbar-brand {
 
 /* End Header */
 
+/* Login Header */
+
+[login] .header {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+	[login] .header {
+    	width: calc(100% - 250px);
+	}
+}
+
+/* End Login Header */
+
 /* Main */
 
 .main {
@@ -326,14 +354,26 @@ h1.navbar-brand {
 
 /* End Main */
 
+/* Login Main */
+
+[login] .main {
+	width: 100%;
+	margin-left: 0;
+}
+
+@media (min-width: 992px) {
+	[login] .main {
+		width: calc(100% - 250px);
+		margin-left: 250px;
+	}
+}
+
+/* End Login Main */
+
 /* Form */
 
 .form-group {
 	margin-top: 40px;
-}
-
-.form-control {
-	background-color: transparent;
 }
 
 .form-control option:hover {
@@ -408,23 +448,23 @@ label.control-label {
 	transition: all .25s ease-in-out;
 }
 
-.form-control::-webkit-input-placeholder {	/* WebKit, Blink, Edge */
+#frm-signup .form-control::-webkit-input-placeholder {	/* WebKit, Blink, Edge */
     opacity: 0;
 }
 
-.form-control:-moz-placeholder {			/* Mozilla Firefox 4 to 18 */
+#frm-signup .form-control:-moz-placeholder {			/* Mozilla Firefox 4 to 18 */
     opacity: 0;
 }
 
-.form-control::-moz-placeholder {			/* Mozilla Firefox 19+ */
+#frm-signup .form-control::-moz-placeholder {			/* Mozilla Firefox 19+ */
     opacity: 0;
 }
 
-.form-control:-ms-input-placeholder {		/* Internet Explorer 10-11 */
+#frm-signup .form-control:-ms-input-placeholder {		/* Internet Explorer 10-11 */
     opacity: 0;
 }
 
-.form-control::-ms-input-placeholder {		/* Microsoft Edge */
+#frm-signup .form-control::-ms-input-placeholder {		/* Microsoft Edge */
     opacity: 0;
 }
 
@@ -465,6 +505,25 @@ select {
 }
 
 /* End Form */
+
+/* Form Login */
+
+#frm-login {
+	margin-top: 150px;
+	padding: 0 15px;
+}
+
+#frm-login .form-control {
+	margin-top: 25px;
+	border-radius: 5px;
+}
+
+#frm-login [type="text"].form-control {
+	padding-left: 10px; 
+	padding-right: 10px;
+}
+
+/* End Form Login */
 
 /* Report card */
 
