@@ -146,7 +146,6 @@ body {
 
 #sidebar .navbar-brand {
     color: #FFFFFF;
-	font-size: 14px;
 }
 
 #sidebar .navbar-nav > li > a {
@@ -260,29 +259,12 @@ body {
 	float: right !important;
 }
 
-.navbar-brand span.glyphicon {
-	float: none;
-	margin-left: 10px;
-}
-
 .navbar-brand {
 	padding-top: 5px;
 }
 
-.navbar-brand i {
-	cursor: pointer;
-	padding: 8px;
-	border-radius: 50%;
-	font-size: 10px;
-	margin-bottom: 10px;
-}
-
-.navbar-brand i:hover {
-	background-color: rgba(255,255,255,0.10);
-}
-
-.navbar-brand i:active {
-	background-color: rgba(0,0,0,0.10);
+h1.navbar-brand {
+	font-size: 24px;
 }
 
 /* End Sidebar */
@@ -292,12 +274,12 @@ body {
 .header {
 	position: fixed;
 	padding: 20px 50px;
-    width: 100%;
+    width: calc(100% - 40px);
     z-index: 99998;
 	background-color: var(--color-theme-d4);
 	color: #FFFFFF;
 	font-size: 18px;
-	left: 40px;
+	right: 0;
 }
 
 .header {
@@ -306,14 +288,18 @@ body {
 
 @media (min-width: 992px) {
 	.header {
-		left: 250px;
+    	width: calc(100% - 250px);
 	}
 }
 
-.header .avatar {
-	height: 50px;
-	width: 50px;
-	margin-right:15px;
+.header a {
+	color: #FFFFFF;
+	float: right;
+}
+
+.header a:hover,
+.header a:focus {
+	text-decoration: none;
 }
 
 /* End Header */
@@ -344,6 +330,10 @@ body {
 
 .form-group {
 	margin-top: 40px;
+}
+
+.form-control {
+	background-color: transparent;
 }
 
 .form-control option:hover {
