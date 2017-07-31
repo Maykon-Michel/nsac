@@ -152,7 +152,7 @@ class Container
             } elseif (is_string($arg) && substr($arg, strlen($arg)-1, 1) == ']') {
                 $parts = explode('[', $arg);
                 if (!class_exists($parts[0], true) && !interface_exists($parts[0], true)) {
-                    throw new \Mockery\Exception('Can only create a partial mock from'
+                    throw new \Mockery\Exception('Can only create a partials mock from'
                     . ' an existing class or interface');
                 }
                 $class = $parts[0];

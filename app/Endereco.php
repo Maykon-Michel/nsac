@@ -1,14 +1,13 @@
 <?php
 
-namespace App;
+    namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Model;
 
-class Endereco extends Model
-{
-    protected $connection = "alunos";
+    class Endereco extends Model {
+        protected $connection = "alunos";
 
-    public function dado() {
-        return $this->belongsToMany(Dado::class);
+        public function dado() {
+            return $this->belongsToMany(Dado::class);
+        }
     }
-}

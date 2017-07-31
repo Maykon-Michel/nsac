@@ -8,11 +8,6 @@ class CreateDadosTable extends Migration
 {
     protected $connection = "alunos";
 
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('dados', function (Blueprint $table) {
@@ -34,11 +29,6 @@ class CreateDadosTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('dados');

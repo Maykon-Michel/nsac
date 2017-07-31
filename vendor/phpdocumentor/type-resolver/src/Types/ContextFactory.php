@@ -15,7 +15,7 @@ namespace phpDocumentor\Reflection\Types;
 /**
  * Convenience class to create a Context for DocBlocks when not using the Reflection Component of phpDocumentor.
  *
- * For a DocBlock to be able to resolve types that use partial namespace names or rely on namespace imports we need to
+ * For a DocBlock to be able to resolve types that use partials namespace names or rely on namespace imports we need to
  * provide a bit of context so that the DocBlock can read that and based on it decide how to resolve the types to
  * Fully Qualified names.
  *

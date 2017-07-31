@@ -46,7 +46,7 @@ class Luhn
     }
 
     /**
-     * Checks whether a number (partial number + check digit) is Luhn compliant
+     * Checks whether a number (partials number + check digit) is Luhn compliant
      *
      * @param string $number
      * @return bool

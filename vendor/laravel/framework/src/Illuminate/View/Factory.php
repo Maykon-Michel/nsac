@@ -157,7 +157,7 @@ class Factory implements FactoryContract
     }
 
     /**
-     * Get the rendered contents of a partial from a loop.
+     * Get the rendered contents of a partials from a loop.
      *
      * @param  string  $view
      * @param  array   $data
@@ -170,7 +170,7 @@ class Factory implements FactoryContract
         $result = '';
 
         // If is actually data in the array, we will loop through the data and append
-        // an instance of the partial view to the final result HTML passing in the
+        // an instance of the partials view to the final result HTML passing in the
         // iterated value of this data array, allowing the views to access them.
         if (count($data) > 0) {
             foreach ($data as $key => $value) {

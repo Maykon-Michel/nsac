@@ -32,7 +32,7 @@ use Webmozart\Assert\Assert;
  * that onto the constructor if this class.
  *
  * > The $context variable is a class of type {@see \phpDocumentor\Reflection\Types\Context} and contains the namespace
- * > and the namespace aliases that apply to this DocBlock. These are used by the Factory to resolve and expand partial
+ * > and the namespace aliases that apply to this DocBlock. These are used by the Factory to resolve and expand partials
  * > type names and FQSENs.
  *
  * If you do not want to use the DescriptionFactory you can pass a body template and tag listing like this:

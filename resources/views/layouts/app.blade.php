@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    
+    @yield('styles')
 
 </head>
 <body {{ Auth::check() ?: 'login' }}>
@@ -36,5 +38,7 @@
     </body>
 
     @include('layouts.partials.footer')
+    
+    @yield('scripts')
 
 </html>

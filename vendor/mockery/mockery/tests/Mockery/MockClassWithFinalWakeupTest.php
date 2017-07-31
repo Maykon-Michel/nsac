@@ -39,7 +39,7 @@ class MockClassWithFinalWakeupTest extends MockeryTestCase
     /**
      * @test
      *
-     * Test that we are able to create partial mocks of classes that have
+     * Test that we are able to create partials mocks of classes that have
      * a __wakeup method marked as final. As long as __wakeup is not one of the
      * mocked methods.
      */

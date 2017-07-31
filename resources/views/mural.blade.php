@@ -4,7 +4,7 @@
     <!-- conteudo do desktop-->
     <div class="container-fluid visible-sm visible-md visible-lg">
         <div class="row">
-            <div class="col-sm-3  alignRight">
+            <div class="col-sm-3  pull-right">
                 <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary">Tabs</a>
                 <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
                     <li class="active"><a href="#vtab1" data-toggle="tab">Geral</a></li>

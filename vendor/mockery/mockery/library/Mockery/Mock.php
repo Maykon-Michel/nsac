@@ -283,9 +283,9 @@ class Mock implements MockInterface
 
     /**
      * Accepts a closure which is executed with an object recorder which proxies
-     * to the partial source object. The intent being to record the
+     * to the partials source object. The intent being to record the
      * interactions of a concrete object as a set of expectations on the
-     * current mock object. The partial may then be passed to a second process
+     * current mock object. The partials may then be passed to a second process
      * to see if it fulfils the same (or exact same) contract as the original.
      *
      * @param Closure $closure

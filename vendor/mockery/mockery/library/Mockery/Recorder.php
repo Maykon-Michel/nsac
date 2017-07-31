@@ -51,7 +51,7 @@ class Recorder
     /**
      * Construct accepting the mock object on which expectations are to be
      * recorded. The second parameter is the subject object, passed into
-     * a \Mockery::mock() call in the same way as a partial mock requires.
+     * a \Mockery::mock() call in the same way as a partials mock requires.
      *
      * @param \Mockery\MockInterface $mock
      * @param object $subject

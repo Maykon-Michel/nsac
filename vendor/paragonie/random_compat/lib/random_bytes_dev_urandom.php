@@ -115,7 +115,7 @@ if (!is_callable('random_bytes')) {
             $buf = '';
 
             /**
-             * We use fread() in a loop to protect against partial reads
+             * We use fread() in a loop to protect against partials reads
              */
             do {
                 /**

@@ -131,7 +131,7 @@ abstract class ParserAbstract implements Parser
      * Parses PHP code into a node tree.
      *
      * If a non-throwing error handler is used, the parser will continue parsing after an error
-     * occurred and attempt to build a partial AST.
+     * occurred and attempt to build a partials AST.
      *
      * @param string $code The source code to parse
      * @param ErrorHandler|null $errorHandler Error handler to use for lexer/parser errors, defaults

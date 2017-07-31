@@ -1,39 +1,39 @@
 @extends('layouts.app')
 
 @section('content')
-    <table class="table-hover container-fluid text-center visible-sm visible-md visible-lg">
+    <table class="table-striped table-hover container-fluid text-center visible-sm visible-md visible-lg" id="boletim">
         <thead>
         <tr>
-            <th class="col-sm-3"></th>
-            <th class="col-sm-2">1&ordm; Bimestre</th>
-            <th class="col-sm-2">2&ordm; Bimestre</th>
-            <th class="col-sm-2">3&ordm; Bimestre</th>
-            <th class="col-sm-2">4&ordm; Bimestre</th>
+            <th class="col-sm-3 text-center"></th>
+            <th class="col-sm-2 text-center">1&ordm; Bimestre</th>
+            <th class="col-sm-2 text-center">2&ordm; Bimestre</th>
+            <th class="col-sm-2 text-center">3&ordm; Bimestre</th>
+            <th class="col-sm-2 text-center">4&ordm; Bimestre</th>
             <th class="col-sm-1"></th>
         </tr>
         <tr>
-            <th>Matéria</th>
-            <th class="row">
+            <th class="text-left">Matéria</th>
+            <th class="row text-center">
                 <div class="col-sm-4" data-toggle="tooltip" title="Média Bimestral">M.B.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Média da Turma">M.T.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Faltas">F.</div>
             </th>
-            <th class="row">
+            <th class="row text-center">
                 <div class="col-sm-4" data-toggle="tooltip" title="Média Bimestral">M.B.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Média da Turma">M.T.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Faltas">F.</div>
             </th>
-            <th class="row">
+            <th class="row text-center">
                 <div class="col-sm-4" data-toggle="tooltip" title="Média Bimestral">M.B.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Média da Turma">M.T.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Faltas">F.</div>
             </th>
-            <th class="row">
+            <th class="row text-center">
                 <div class="col-sm-4" data-toggle="tooltip" title="Média Bimestral">M.B.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Média da Turma">M.T.</div>
                 <div class="col-sm-4" data-toggle="tooltip" title="Faltas">F.</div>
             </th>
-            <th class="row">
+            <th class="row text-center">
                 <div class="col-md-12" data-toggle="tooltip" title="Média Final">M.F.</div>
             </th>
         </tr>
@@ -41,28 +41,28 @@
         <tbody>
         @foreach(Auth::user()->nota as $nota)
             <tr>
-                <td>{{ $nota->getDisciplina->descricao }}</td>
+                <td class="text-left">{{ $nota->getDisciplina->abreviacao }}</td>
                 <td class="row">
-                    <div class="col-sm-4">{{ $nota->nb1 }}</div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">{{ $nota->nb(1) }}</div>
+                    <div class="col-sm-4">0</div>
                     <div class="col-sm-4">{{ $nota->fb1 }}</div>
                 </td>
                 <td class="row">
-                    <div class="col-sm-4">{{ $nota->nb2 }}</div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">{{ $nota->nb(2) }}</div>
+                    <div class="col-sm-4">0</div>
                     <div class="col-sm-4">{{ $nota->fb2 }}</div>
                 </td>
                 <td class="row">
-                    <div class="col-sm-4">{{ $nota->nb3 }}</div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">{{ $nota->nb(3) }}</div>
+                    <div class="col-sm-4">0</div>
                     <div class="col-sm-4">{{ $nota->fb3 }}</div>
                 </td>
                 <td class="row">
-                    <div class="col-sm-4">{{ $nota->nb4 }}</div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">{{ $nota->nb(4) }}</div>
+                    <div class="col-sm-4">0</div>
                     <div class="col-sm-4">{{ $nota->fb4 }}</div>
                 </td>
-                <td></td>
+                <td>{{ $nota->nf() }}</td>
             </tr>
         @endforeach
         </tbody>
@@ -86,25 +86,25 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-3" data-toggle="tooltip" title="Primeiro Bimestre">1&ordm; B</div>
-                            <div class="col-xs-3">{{ $nota->nb1 }}</div>
+                            <div class="col-xs-3">{{ $nota->nb(1) }}</div>
                             <div class="col-xs-3">00.0</div>
                             <div class="col-xs-3">{{ $nota->fb1 }}</div>
                         </div>
                         <div class="row">
                             <div class="col-xs-3" data-toggle="tooltip" title="Segundo Bimestre">2&ordm; B</div>
-                            <div class="col-xs-3">{{ $nota->nb2 }}</div>
+                            <div class="col-xs-3">{{ $nota->nb(2) }}</div>
                             <div class="col-xs-3">00.0</div>
                             <div class="col-xs-3">{{ $nota->fb2 }}</div>
                         </div>
                         <div class="row">
                             <div class="col-xs-3" data-toggle="tooltip" title="Terceiro Bimestre">3&ordm; B</div>
-                            <div class="col-xs-3">{{ $nota->nb3 }}</div>
+                            <div class="col-xs-3">{{ $nota->nb(3) }}</div>
                             <div class="col-xs-3">00.0</div>
                             <div class="col-xs-3">{{ $nota->fb3 }}</div>
                         </div>
                         <div class="row">
                             <div class="col-xs-3" data-toggle="tooltip" title="Quarto Bimestre">4&ordm; B</div>
-                            <div class="col-xs-3">{{ $nota->nb4 }}</div>
+                            <div class="col-xs-3">{{ $nota->nb(4) }}</div>
                             <div class="col-xs-3">00.0</div>
                             <div class="col-xs-3">{{ $nota->fb4 }}</div>
                         </div>
@@ -113,4 +113,8 @@
             </div>
         @endforeach
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/boletim.js') }}"></script>
 @endsection

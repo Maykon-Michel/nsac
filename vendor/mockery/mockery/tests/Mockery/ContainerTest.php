@@ -317,7 +317,7 @@ class ContainerTest extends MockeryTestCase
     {
         $m = $this->container->mock('MockeryFoo4[foo]');
         $m->shouldReceive('foo')->andReturn('foo');
-        $this->assertEquals('baz', $m->foo()); // partial expectation ignored - will fail callcount assertion
+        $this->assertEquals('baz', $m->foo()); // partials expectation ignored - will fail callcount assertion
         $this->assertTrue($m instanceof MockeryFoo4);
     }
 
@@ -375,7 +375,7 @@ class ContainerTest extends MockeryTestCase
     }
 
     /**
-     * @group partial
+     * @group partials
      */
     public function testCanPartiallyMockANormalClass()
     {
@@ -387,7 +387,7 @@ class ContainerTest extends MockeryTestCase
     }
 
     /**
-     * @group partial
+     * @group partials
      */
     public function testCanPartiallyMockAnAbstractClass()
     {
@@ -399,7 +399,7 @@ class ContainerTest extends MockeryTestCase
     }
 
     /**
-     * @group partial
+     * @group partials
      */
     public function testCanPartiallyMockANormalClassWith2Methods()
     {
@@ -413,7 +413,7 @@ class ContainerTest extends MockeryTestCase
     }
 
     /**
-     * @group partial
+     * @group partials
      */
     public function testCanPartiallyMockAnAbstractClassWith2Methods()
     {
@@ -428,7 +428,7 @@ class ContainerTest extends MockeryTestCase
 
     /**
      * @expectedException \Mockery\Exception
-     * @group partial
+     * @group partials
      */
     public function testThrowsExceptionIfSettingExpectationForNonMockedMethodOfPartialMock()
     {
@@ -440,7 +440,7 @@ class ContainerTest extends MockeryTestCase
 
     /**
      * @expectedException \Mockery\Exception
-     * @group partial
+     * @group partials
      */
     public function testThrowsExceptionIfClassOrInterfaceForPartialMockDoesNotExist()
     {

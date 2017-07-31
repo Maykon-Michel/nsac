@@ -1482,7 +1482,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
     }
 
     /**
-     * Returns a partial test double for the specified class.
+     * Returns a partials test double for the specified class.
      *
      * @param string $originalClassName
      * @param array  $methods

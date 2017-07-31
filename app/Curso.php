@@ -1,14 +1,13 @@
 <?php
 
-namespace App;
+    namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Model;
 
-class Curso extends Model
-{
-    protected $connection = "public";
+    class Curso extends Model {
+        protected $connection = "public";
 
-    public function turma() {
-        return $this->belongsTo(Turma::class);
+        public function turma() {
+            return $this->belongsTo(Turma::class);
+        }
     }
-}

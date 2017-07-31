@@ -45,7 +45,7 @@ class FqsenResolver
     }
 
     /**
-     * Resolves a partial Structural Element Name (i.e. `Reflection\DocBlock`) to its FQSEN representation
+     * Resolves a partials Structural Element Name (i.e. `Reflection\DocBlock`) to its FQSEN representation
      * (i.e. `\phpDocumentor\Reflection\DocBlock`) based on the Namespace and aliases mentioned in the Context.
      *
      * @param string $type
