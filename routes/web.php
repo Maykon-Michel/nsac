@@ -11,30 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('boletim', function () {
-    return view('boletim');
-});
-
-Route::get('corpodocente', function () {
-    return view('corpodocente');
-});
-
-Route::get('graficos', function () {
-    return view('graficos');
-});
-
-Route::get('mural', function () {
-    return view('mural');
-});
-
-Route::get('ocorrencias', function () {
-    return view('ocorrencias');
-});
-
-Route::get('perfil', function () {
-    return view('perfil');
-});
+Route::get('/', 'PagesController@index');
+Route::get('boletim', 'PagesController@boletim');
+Route::get('corpodocente', 'PagesController@corpodocente');
+Route::get('graficos', 'PagesController@graficos');
+Route::get('mural', 'PagesController@mural');
+Route::get('ocorrencias', 'PagesController@ocorrencias');
+Route::get('perfil', 'PagesController@perfil');
