@@ -37,15 +37,6 @@ class CreateNotasTable extends Migration
             $table->boolean('nc4')->nullable()->default(false);
             $table->boolean('conselhoparcial')->default(false);
             $table->boolean('conselhofinal')->default(false);
-
-            $table->foreign('aluno')
-                ->references('matricula')->on('dados')
-                ->onDelete('cascade');
-            $table->foreign('disciplina')
-                ->references('id')->on('public.disciplinas')
-                ->onDelete('cascade');
-
-            DB::connection('alunos')->statement("COMMENT ON TABLE alunos.dados IS 'Armazena as notas dos alunos'");
         });
     }
 
@@ -56,6 +47,6 @@ class CreateNotasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notas');
+        Schema::connection('alunos')->dropIfExists('notas');
     }
 }

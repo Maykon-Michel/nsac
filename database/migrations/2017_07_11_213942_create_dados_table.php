@@ -26,17 +26,10 @@ class CreateDadosTable extends Migration
             $table->integer('sexo')->nullable();
             $table->string('email', 100)->nullable();
             $table->boolean('arquivo')->nullable();
-            $table->char('matricula', 7);
+            $table->char('matricula', 7)->primary();
             $table->string('cpf', 11)->nullable();
             $table->char('ra_gdae', 16)->nullable();
-
-            $table->primary('matricula');
-            $table->foreign('endereco')
-                ->references('codigo')->on('enderecos')
-                ->onDelete('cascade');
         });
-
-        DB::connection('alunos')->statement("COMMENT ON TABLE alunos.dados IS 'Guarda as definições dos alunos do CTI'");
     }
 
     /**
@@ -46,6 +39,6 @@ class CreateDadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dados');
+        Schema::connection('alunos')->dropIfExists('dados');
     }
 }

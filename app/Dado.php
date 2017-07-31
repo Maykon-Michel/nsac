@@ -13,4 +13,8 @@ class Dado extends Model
     public function endereco() {
         return $this->hasOne(Endereco::class);
     }
+
+    public function matricula() {
+        return $this->hasOne(Matricula::class);
+    }
 }

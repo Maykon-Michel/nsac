@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
     <table class="table-hover container-fluid table-docente table-striped visible-sm visible-md visible-lg">

@@ -31,6 +31,6 @@ class CreateEnderecosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enderecos');
+        Schema::connection('alunos')->dropIfExists('enderecos');
     }
 }
