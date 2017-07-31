@@ -9,6 +9,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $connection = "public";
+
     /**
      * The attributes that are mass assignable.
      *
@@ -27,7 +29,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function matricula() {
-        return $this->hasOne(Matricula::class);
+    public function dado() {
+        return $this->hasOne(Dado::class, 'matricula', 'matricula');
+    }
+
+    public function nota() {
+        return $this->hasMany(Nota::class, 'aluno', 'matricula');
     }
 }

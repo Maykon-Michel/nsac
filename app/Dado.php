@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dado extends Model
 {
+    protected $connection = "alunos";
+
     public function nota() {
         return $this->hasMany(Nota::class);
     }

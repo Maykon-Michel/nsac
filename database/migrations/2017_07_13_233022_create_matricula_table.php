@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateMatriculaTable extends Migration
 {
+    protected $connection = "alunos";
+
     /**
      * Run the migrations.
      *
@@ -13,7 +15,7 @@ class CreateMatriculaTable extends Migration
      */
     public function up()
     {
-        Schema::connection('alunos')->create('matricula', function (Blueprint $table) {
+        Schema::create('matricula', function (Blueprint $table) {
             $table->increments('codigo');
             $table->integer('turma')->nullable();
             $table->integer('situacao')->nullable()->default(0);
@@ -31,6 +33,6 @@ class CreateMatriculaTable extends Migration
      */
     public function down()
     {
-        Schema::connection('alunos')->dropIfExists('matricula');
+        Schema::dropIfExists('matricula');
     }
 }

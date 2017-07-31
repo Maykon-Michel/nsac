@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateEnderecosTable extends Migration
 {
+    protected $connection = "alunos";
+
     /**
      * Run the migrations.
      *
@@ -13,7 +15,7 @@ class CreateEnderecosTable extends Migration
      */
     public function up()
     {
-        Schema::connection('alunos')->create('enderecos', function (Blueprint $table) {
+        Schema::create('enderecos', function (Blueprint $table) {
             $table->increments('codigo');
             $table->string('logradouro', 70)->nullable();
             $table->string('numero', 10)->nullable();
@@ -31,6 +33,6 @@ class CreateEnderecosTable extends Migration
      */
     public function down()
     {
-        Schema::connection('alunos')->dropIfExists('enderecos');
+        Schema::dropIfExists('enderecos');
     }
 }

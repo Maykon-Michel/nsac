@@ -1,8 +1,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top sidebar" id="sidebar" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <img src="images/1557006/avatar.jpg" alt="" class="img-circle">
-            <span class="navbar-brand">Johana de Santis</span>
+            <img src="images/{{ Auth::user()->matricula }}/avatar.jpg" alt="" class="img-circle">
+            <span class="navbar-brand">{{ Auth::user()->dado->nome }}</span>
         </div>
         <div>
             <ul class="nav navbar-nav">

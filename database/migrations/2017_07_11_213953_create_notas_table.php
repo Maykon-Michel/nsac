@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateNotasTable extends Migration
 {
+    protected $connection = "alunos";
+
     /**
      * Run the migrations.
      *
@@ -13,7 +15,7 @@ class CreateNotasTable extends Migration
      */
     public function up()
     {
-        Schema::connection('alunos')->create('notas', function (Blueprint $table) {
+        Schema::create('notas', function (Blueprint $table) {
             $table->increments('id');
             $table->char('aluno', 7)->nullable();
             $table->integer('disciplina')->nullable();
@@ -47,6 +49,6 @@ class CreateNotasTable extends Migration
      */
     public function down()
     {
-        Schema::connection('alunos')->dropIfExists('notas');
+        Schema::dropIfExists('notas');
     }
 }

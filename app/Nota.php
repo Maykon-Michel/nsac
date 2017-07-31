@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nota extends Model
 {
-    public function disciplina() {
-        return $this->hasOne(Disciplina::class);
+    protected $connection = "alunos";
+
+    public function getDisciplina() {
+        return $this->hasOne(Disciplina::class, 'id', 'disciplina');
     }
 
     public function dado() {
