@@ -7,7 +7,7 @@
             {{ csrf_field() }}
             <div class="input-group">
                 <label for="ra" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
-                <input type="text" name="" class="form-control" id="email" placeholder="R.A.">
+                <input type="text" name="email" class="form-control" id="email" placeholder="R.A.">
             </div>
             @if ($errors->has('email'))
                 <span class="help-block">
