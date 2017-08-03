@@ -114,7 +114,3 @@
         @endforeach
     </div>
 @endsection
-
-@section('scripts')
-    <script src="{{ asset('js/boletim.js') }}"></script>
-@endsection

@@ -13,11 +13,7 @@
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    
-    @yield('styles')
+    <link rel="stylesheet" href="{{ asset('css/nsac.css') }}">
 
 </head>
 <body {{ Auth::check() ?: 'login' }}>
@@ -36,9 +32,8 @@
         </div>
     </div>
     </body>
-
-    @include('layouts.partials.footer')
     
-    @yield('scripts')
+    <!-- Javascript -->
+    <script src="{{ asset('js/nsac.js') }}"></script>
 
 </html>
