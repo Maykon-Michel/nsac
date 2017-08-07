@@ -35,5 +35,6 @@
     
     <!-- Javascript -->
     <script src="{{ asset('js/nsac.js') }}"></script>
+    <script>$.material.init();</script>
 
 </html>
