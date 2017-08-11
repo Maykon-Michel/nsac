@@ -1,825 +1,418 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- conteudo do desktop-->
-    <div class="container-fluid visible-sm visible-md visible-lg">
-        <div class="row">
-            <div class="col-sm-3  pull-right">
-                <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary">Tabs</a>
-                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
-                    <li class="active"><a href="#vtab1" data-toggle="tab">Geral</a></li>
-                    <li><a href="#vtab2" data-toggle="tab">Horários de provas</a></li>
-                    <li><a href="#vtab3" data-toggle="tab">Horários de aulas</a></li>
-                </ul>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#geral" data-toggle="tab">Geral</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="mural" data-target="">
+                Horário de provas <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#provas1" data-toggle="tab">1&deg; Bimestre</a></li>
+                <li><a href="#provas2" data-toggle="tab">2&deg; Bimestre</a></li>
+                <li><a href="#provas3" data-toggle="tab">3&deg; Bimestre</a></li>
+                <li><a href="#provas4" data-toggle="tab">4&deg; Bimestre</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="mural" data-target="">
+                Horário de aulas <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#info-aulas" data-toggle="tab">Informática</a></li>
+                <li><a href="#eletro-aulas" data-toggle="tab">Eletrônica</a></li>
+                <li><a href="#meca-aulas" data-toggle="tab">Mecânica</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="tab-content" class="tab-content">
+        <div class="tab-pane fade active in" id="geral">
+            <div class="list-group">
+                <hr>
+                <div class="list-group-item">
+                    <div class="row-content">
+                        <div class="least-content">21/03/2017</div>
+                        <h4 class="list-group-item-heading">Horário de plantão</h4>
+                        <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-plantao1.pdf" target="_blank"
+                           class="list-group-item-text">http://www.cti.feb.unesp.br/Home/mural/horario-de-plantao1.pdf</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="list-group-item">
+                    <div class="row-content">
+                        <h4 class="list-group-item-heading">Horário de ônibus</h4>
+                        <a href="https://editor.mobilibus.com/web/timetable/27b4n" target="_blank"
+                           class="list-group-item-text">https://editor.mobilibus.com/web/timetable/27b4n</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="list-group-item">
+                    <div class="row-content">
+                        <div class="least-content">09/05/2016</div>
+                        <h4 class="list-group-item-heading">Plano escolar</h4>
+                        <a href="http://www.cti.feb.unesp.br/Home/mural/plano-escolar-2016.pdf" target="_blank"
+                           class="list-group-item-text">http://www.cti.feb.unesp.br/Home/mural/plano-escolar-2016.pdf</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="list-group-item">
+                    <div class="row-content">
+                        <div class="least-content">01/01/2017</div>
+                        <h4 class="list-group-item-heading">Código disciplinar</h4>
+                        <a href="http://www.cti.feb.unesp.br/Home/mural/codigo-disciplinar---cti-08dez16.pdf"
+                           target="_blank"
+                           class="list-group-item-text">
+                            http://www.cti.feb.unesp.br/Home/mural/codigo-disciplinar---cti-08dez16.pdf
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="list-group-item">
+                    <div class="row-content">
+                        <div class="least-content">21/11/2016</div>
+                        <h4 class="list-group-item-heading">Calendário escolar</h4>
+                        <a href="http://www.cti.feb.unesp.br/Home/mural/calendario-escolar-2017-homologado-pela-d.e..pdf"
+                           target="_blank"
+                           class="list-group-item-text">
+                            http://www.cti.feb.unesp.br/Home/mural/calendario-escolar-2017-homologado-pela-d.e..pdf
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="list-group-item">
+                    <div class="row-content">
+                        <div class="least-content">01/11/2015</div>
+                        <h4 class="list-group-item-heading">Projeto político pedagógico</h4>
+                        <a href="http://www.cti.feb.unesp.br/Home/mural/proposta-pedagogica---nov15-1.pdf"
+                           target="_blank"
+                           class="list-group-item-text">
+                            hhttp://www.cti.feb.unesp.br/Home/mural/proposta-pedagogica---nov15-1.pdf
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-9">
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
-                        <h3>Geral</h3>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12 ">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Informações gerais</h3>
-                                            <span class="pull-right">
-                                                        <ul class="nav panel-tabs">
-                                                                <!--<li class="active"><a href="#taba" data-toggle="tab">Informática</a></li>-->
-                                                        </ul>
-                                                    </span>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="taba">
-                                                    <div class="panel panel-default">
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item">
-                                                                <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                   target="_blank">
-                                                                    Horário de plantão 2017
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                   target="_blank">
-                                                                    Horário de ônibus
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                   target="_blank">
-                                                                    Plano escolar 2016
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                   target="_blank">
-                                                                    Código disciplinar 2017
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                   target="_blank">
-                                                                    calendário escolar 2017
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                   target="_blank">
-                                                                    Projeto político pedagógico
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+        <div class="tab-pane fade" id="provas1">
+            <div class="tab-pane fade active in" id="geral">
+                <div class="list-group">
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Informática</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf</a>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="vtab2">
-                        <h3>Horários de provas</h3>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12 ">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Horário de provas</h3>
-                                            <span class="pull-right">
-
-                                                                            <ul class="nav panel-tabs">
-                                                                                <li class="active"><a href="#tab1"
-                                                                                                      data-toggle="tab">1&ordm </a></li>
-                                                                                <li><a href="#tab2" data-toggle="tab">2&ordm </a></li>
-                                                                                <li><a href="#tab3" data-toggle="tab">3&ordm </a></li>
-                                                                                <li><a href="#tab4" data-toggle="tab">4&ordm </a></li>
-                                                                            </ul>
-                                                                        </span>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="tab1">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Integral</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Noturno</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane" id="tab2">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Integral</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Noturno</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane" id="tab3">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Integral</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Noturno</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane" id="tab4">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Integral</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Noturno</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                        target="_blank">Mecânica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                        target="_blank">Eletônica</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                        target="_blank">Informática</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Eletrônica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf</a>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade in" id="vtab3">
-                        <h3>Horários de aulas</h3>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12 ">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Horário de Aulas</h3>
-                                            <span class="pull-right">
-                                                                                            <ul class="nav panel-tabs">
-                                                                                                    <li class="active"><a
-                                                                                                                href="#tab5"
-                                                                                                                data-toggle="tab">Informática</a></li>
-                                                                                                    <li><a href="#tab6"
-                                                                                                           data-toggle="tab">Eletrônica </a></li>
-                                                                                                    <li><a href="#tab7"
-                                                                                                           data-toggle="tab">Mecânica </a></li>
-                                                                                            </ul>
-                                                                                        </span>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="tab5">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Integral</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">71A</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">71B</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">72A</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">72B</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">73A</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">73B</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Noturno</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">71C</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">72C</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">72D</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">73C</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane" id="tab6">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Integral</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">51A</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">52A</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">53A</a></li>
-
-                                                        </ul>
-                                                    </div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Noturno</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">51B</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">52B</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">53B</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane" id="tab7">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Integral</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">11A</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">12A</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">13A</a></li>
-
-                                                        </ul>
-                                                    </div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">Noturno</div>
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">11B</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">12B</a></li>
-                                                            <li class="list-group-item"><a
-                                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                        target="_blank">13B</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Mecânica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--   Desktop     -->
-    <!-- mobile -->
-    <div class="container-fluid visible-xs">
-        <div class="panel panel-primary">
-            <div class="panel-heading " data-toggle="collapse" href="#geral">
-                <h4 class="panel-title">
-                    Informações gerais
-                    <div class="glyphicon glyphicon-sort pull-right"></div>
-                </h4>
-            </div>
-            <div class="row">
-                <div class="panel-collapse collapse" id="geral">
-                    <div class="panel-body text-center">
-                        <div class="panel-body">
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="taba">
-                                    <div class="panel panel-default">
-                                        <ul class="list-group">
-                                            <li class="list-group-item"><a
-                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                        target="_blank">Horário de plantão 2017</a></li>
-                                            <li class="list-group-item"><a
-                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                        target="_blank">Horário de ônibus</a></li>
-                                            <li class="list-group-item"><a
-                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                        target="_blank">Plano escolar 2016</a></li>
-                                            <li class="list-group-item"><a
-                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                        target="_blank">Código disciplinar 2017</a></li>
-                                            <li class="list-group-item"><a
-                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                        target="_blank">calendário escolar 2017</a></li>
-                                            <li class="list-group-item"><a
-                                                        href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                        target="_blank">Projeto político pedagógico</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="tab-pane fade" id="provas2">
+            <div class="tab-pane fade active in" id="geral">
+                <div class="list-group">
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Informática</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Eletrônica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Mecânica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr></hr>
-        <div class="panel panel-primary">
-            <div class="panel-heading " data-toggle="collapse" href="#provas">
-                <h4 class="panel-title">
-                    Horário de provas
-                    <div class="glyphicon glyphicon-sort pull-right"></div>
-                </h4>
-            </div>
-            <div class="row">
-                <div class="panel-collapse collapse" id="provas">
-                    <div class="panel-body text-center">
-                        <div class="panel-body">
-                            <div class="tab-content">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="featurette" id="about">
-                                            <!------------------------code---------------start---------------->
-                                            <div class="container-fluid">
-                                                <div id="custom_carousel" class="carousel slide" data-ride="carousel">
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-                                                        <div class="item active">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-md-3"></div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Integral</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Noturno</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-md-3"></div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Integral</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Noturno</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-md-3"></div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Integral</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Noturno</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-md-3"></div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Integral</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Noturno</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
-                                                                                            target="_blank">Mecânica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
-                                                                                            target="_blank">Eletônica</a>
-                                                                                </li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
-                                                                                            target="_blank">Informática</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- End Item -->
-                                                    </div>
-                                                    <!-- End Carousel Inner -->
-                                                    <div class="controls">
-                                                        <ul class="nav">
-                                                            <li data-target="#custom_carousel" data-slide-to="0"
-                                                                class="active">
-                                                                <a href="#" style="font-size:1.5em;">1&ordm</a>
-                                                            </li>
-                                                            <li data-target="#custom_carousel" data-slide-to="1">
-                                                                <a href="#" style="font-size:1.5em;">2&ordm</a>
-                                                            </li>
-                                                            <li data-target="#custom_carousel" data-slide-to="2">
-                                                                <a href="#" style="font-size:1.5em;">3&ordm</a>
-                                                            </li>
-                                                            <li data-target="#custom_carousel" data-slide-to="3">
-                                                                <a href="#" style="font-size:1.5em;">4&ordm</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Carousel -->
-                                            </div>
-                                            <!----Code------end----------------------------------->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="tab-pane fade" id="provas3">
+            <div class="tab-pane fade active in" id="geral">
+                <div class="list-group">
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Informática</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Eletrônica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Mecânica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr></hr>
-        <div class="panel panel-primary">
-            <div class="panel-heading " data-toggle="collapse" href="#aulas">
-                <h4 class="panel-title">
-                    Horário de aulas
-                    <div class="glyphicon glyphicon-sort pull-right"></div>
-                </h4>
-            </div>
-            <div class="row">
-                <div class="panel-collapse collapse" id="aulas">
-                    <div class="panel-body text-center">
-                        <div class="panel-body">
-                            <div class="tab-content">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="featurette" id="about">
-                                            <!------------------------code---------------start---------------->
-                                            <div class="container-fluid">
-                                                <div id="custom_carousel2" class="carousel slide" data-ride="carousel">
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-                                                        <div class="item active">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-md-4"></div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Integral</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">71A</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">71B</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">72A</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">72B</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">73A</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">73B</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Noturno</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">71C</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">72C</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">72D</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">73C</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-md-4"></div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Integral</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">51A</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">52A</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">53A</a></li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Noturno</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">51B</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">52B</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">53B</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-md-4"></div>
-                                                                    <div class="col-md-12">
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Integral</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">11A</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">12A</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">13A</a></li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">Noturno</div>
-                                                                            <ul class="list-group">
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">11B</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">12B</a></li>
-                                                                                <li class="list-group-item"><a
-                                                                                            href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf"
-                                                                                            target="_blank">13B</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- End Item -->
-                                                    </div>
-                                                    <!-- End Carousel Inner -->
-                                                    <div class="controls">
-                                                        <ul class="nav">
-                                                            <li data-target="#custom_carousel2" data-slide-to="0"
-                                                                class="active">
-                                                                <a href="#">
-                                                                    <div style="font-size:1.5em;"
-                                                                         class="glyphicon glyphicon-hdd "></div>
-                                                                </a>
-                                                            </li>
-                                                            <li data-target="#custom_carousel2" data-slide-to="1">
-                                                                <a href="#">
-                                                                    <div style="font-size:1.5em;"
-                                                                         class="glyphicon glyphicon-flash "></div>
-                                                                </a>
-                                                            </li>
-                                                            <li data-target="#custom_carousel2" data-slide-to="2">
-                                                                <a href="#">
-                                                                    <div style="font-size:1.5em;"
-                                                                         class="glyphicon glyphicon-wrench "></div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- End Carousel -->
-                                            </div>
-                                            <!----Code------end----------------------------------->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="tab-pane fade" id="provas4">
+            <div class="tab-pane fade active in" id="geral">
+                <div class="list-group">
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Informática</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovasinfo1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovas-1bi-2017---informatica---noturno.pdf</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Eletrônica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1bi---2017---diurno---300317---eletronica.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-de-provas---1-bi---eletronica---noite---v3.pdf</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Mecânica</h4>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf" target="_blank"
+                               class="list-group-item-text"> <strong>Integral</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horprovamec1bi17.pdf</a><br>
+                            <a href="http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf"
+                               target="_blank"
+                               class="list-group-item-text"> <strong>Noturno</strong> -
+                                http://www.cti.feb.unesp.br/Home/mural/horario-provas-1bi---2017-mecanica-noite.pdf</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- mobile -->
+        <div class="tab-pane fade" id="info-aulas">
+            <div class="tab-pane fade active in" id="geral">
+                <div class="list-group">
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Integral</h4>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>71A</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>71B</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>72A</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>72B</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>73B</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>73B</strong> -
+                                >link<</a><br>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Integral</h4>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>71C</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>72C</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>72D</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>73C</strong> -
+                                >link<</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="eletro-aulas">
+            <div class="tab-pane fade active in" id="geral">
+                <div class="list-group">
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Integral</h4>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>51A</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>52A</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>53A</strong> -
+                                >link<</a><br>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Integral</h4>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>51B</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>52B</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>53B</strong> -
+                                >link<</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="meca-aulas">
+            <div class="tab-pane fade active in" id="geral">
+                <div class="list-group">
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Integral</h4>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>11A</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>12A</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>13A</strong> -
+                                >link<</a><br>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <div class="least-content">21/03/2017</div>
+                            <h4>Integral</h4>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>11B</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>12B</strong> -
+                                >link<</a><br>
+                            <a href="#link" target="_blank"
+                               class="list-group-item-text"> <strong>13B</strong> -
+                                >link<</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

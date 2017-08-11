@@ -21,7 +21,7 @@
                         Corpo Docente<span class="glyphicon glyphicon-apple"/>
                     </a>
                 </li>
-                <li class="{{ Request::is('graficos') ? 'active' : '' }}">
+                <li class="{{ Request::is('graficos') ? 'active' : ''}}">
                     <a href="graficos">
                         Gráficos<span class="glyphicon glyphicon-stats"/>
                     </a>
