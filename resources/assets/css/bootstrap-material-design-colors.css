@@ -17,7 +17,7 @@ label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:b
 .navbar.navbar-primary .dropdown-menu li > a:focus,
 .dropdown-menu li a:hover,
 .text-primary {
-    color: var(--color-theme-d4);
+    color: var(--d4);
 }
 
 body .container .well-primary,
@@ -60,7 +60,7 @@ label.radio-inline input[type=radio]:checked ~ .check,
 .slider .noUi-handle,
 .slider.slider-default .noUi-handle,
 .slider.slider-primary .noUi-handle {
-    background-color: var(--color-theme-d4);
+    background-color: var(--d4);
 }
 
 .checkbox input[type=checkbox]:checked + .checkbox-material .check,
@@ -70,20 +70,20 @@ label.radio-inline input[type=radio]:checked ~ .circle,
 .slider .noUi-handle,
 .slider.slider-default .noUi-handle,
 .slider.slider-primary .noUi-handle {
-    border-color: var(--color-theme-d4);
+    border-color: var(--d4);
 }
 
 .form-control,
 .form-group .form-control,
 .form-group.is-focused .form-control {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-theme-d4)), to(var(--color-theme-d4))), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
-    background-image: -webkit-linear-gradient(var(--color-theme-d4), var(--color-theme-d4)), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: -o-linear-gradient(var(--color-theme-d4), var(--color-theme-d4)), -o-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: linear-gradient(var(--color-theme-d4), var(--color-theme-d4)), linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--d4)), to(var(--d4))), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(var(--d4), var(--d4)), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(var(--d4), var(--d4)), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(var(--d4), var(--d4)), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
 .nav-tabs {
-    background: var(--color-theme-d4);
+    background: var(--d4);
 }
 
 .btn.btn-raised:not(.btn-link):hover.btn-primary,
@@ -102,5 +102,5 @@ label.radio-inline input[type=radio]:checked ~ .circle,
 .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-primary,
 .btn-group-raised .btn:not(.btn-link):active.btn-primary,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-primary {
-    background-color: var(--color-theme-d3);
+    background-color: var(--d3);
 }
