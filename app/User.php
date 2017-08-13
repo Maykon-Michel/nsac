@@ -32,8 +32,4 @@ class User extends Authenticatable
     public function dado() {
         return $this->hasOne(Dado::class, 'matricula', 'matricula');
     }
-
-    public function nota() {
-        return $this->hasMany(Nota::class, 'aluno', 'matricula');
-    }
 }

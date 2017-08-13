@@ -7,8 +7,8 @@
     class Dado extends Model {
         protected $connection = "alunos";
 
-        public function nota() {
-            return $this->hasMany(Nota::class);
+        public function notas() {
+            return $this->hasMany(Nota::class, 'aluno', 'matricula');
         }
 
         public function endereco() {
