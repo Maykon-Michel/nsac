@@ -39,7 +39,7 @@
         </tr>
         </thead>
         <tbody>
-        @foreach(Auth::user()->nota as $nota)
+        @foreach(Auth::user()->dado->notas as $nota)
             <tr>
                 <td class="text-left">{{ $nota->getDisciplina->abreviacao }}</td>
                 <td class="row">
@@ -68,7 +68,7 @@
         </tbody>
     </table>
     <div class="panel-group visible-xs">
-        @foreach(Auth::user()->nota as $nota)
+        @foreach(Auth::user()->dado->notas as $nota)
             <div class="panel panel-primary">
                 <div class="panel-heading" data-toggle="collapse" href="#{{ $nota->disciplina }}">
                     <h4 class="panel-title">
