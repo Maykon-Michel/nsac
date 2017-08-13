@@ -15,7 +15,7 @@ class CreateNotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('notas', function (Blueprint $table) {
+        Schema::connection('alunos')->create('notas', function (Blueprint $table) {
             $table->increments('id');
             $table->char('aluno', 7)->nullable();
             $table->integer('disciplina')->nullable();
@@ -49,6 +49,6 @@ class CreateNotasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notas');
+        Schema::connection('alunos')->dropIfExists('notas');
     }
 }

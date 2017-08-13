@@ -8,9 +8,14 @@ class CreateDadosTable extends Migration
 {
     protected $connection = "alunos";
 
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('dados', function (Blueprint $table) {
+        Schema::connection('alunos')->create('dados', function (Blueprint $table) {
             $table->string('nome', 100);
             $table->string('apelido', 40)->nullable();
             $table->integer('endereco')->nullable()->default(0);
@@ -29,8 +34,13 @@ class CreateDadosTable extends Migration
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('dados');
+        Schema::connection('alunos')->dropIfExists('dados');
     }
 }

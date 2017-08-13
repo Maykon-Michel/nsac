@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMatriculaTable extends Migration
+class CreateMatriculasTable extends Migration
 {
     protected $connection = "alunos";
 
@@ -15,7 +15,7 @@ class CreateMatriculaTable extends Migration
      */
     public function up()
     {
-        Schema::create('matricula', function (Blueprint $table) {
+        Schema::connection('alunos')->create('matriculas', function (Blueprint $table) {
             $table->increments('codigo');
             $table->integer('turma')->nullable();
             $table->integer('situacao')->nullable()->default(0);
@@ -33,6 +33,6 @@ class CreateMatriculaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matricula');
+        Schema::connection('alunos')->dropIfExists('matriculas');
     }
 }

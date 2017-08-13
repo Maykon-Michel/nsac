@@ -15,16 +15,17 @@ class CreateDisciplinasTable extends Migration
     {
         Schema::create('disciplinas', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('codigo', 2)->nullable()->unique();
+            $table->char('codigo', 2)->nullable();
             $table->string('descricao', 50)->nullable();
             $table->string('abreviacao', 30)->nullable();
             $table->integer('carga_horaria')->nullable();
             $table->integer('tipo')->default(0);
             $table->boolean('tem_turma')->default(false);
             $table->boolean('optativa')->default(false);
-            $table->integer('turma')->nullable()->unique();
+            $table->integer('turma')->nullable();
             $table->boolean('laboratorio')->default(false);
             $table->boolean('ativo')->default(true);
+            $table->unique(['codigo', 'turma']);
         });
     }
 
