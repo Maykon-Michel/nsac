@@ -18,6 +18,5 @@ Route::get('graficos', 'PagesController@graficos');
 Route::get('mural', 'PagesController@mural');
 Route::get('ocorrencias', 'PagesController@ocorrencias');
 Route::get('perfil', 'PagesController@perfil');
+Route::get('tema/{tema}', 'TemaController@update');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

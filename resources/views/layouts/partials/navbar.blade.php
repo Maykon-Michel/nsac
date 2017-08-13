@@ -46,9 +46,9 @@
                         Temas <span class="caret"></span><span class="glyphicon glyphicon-tint"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#" onClick="changeColor('blue')">Azul</a></li>
-                        <li><a href="#" onClick="changeColor('gray')">Cinza</a></li>
-                        <li><a href="#" onClick="changeColor('purple')">Roxo</a></li>
+                        @foreach(\App\Tema::get() as $tema)
+                            <li><a href="tema/{{ $tema->id }}">{{ $tema->nome }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
             </ul>

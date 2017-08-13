@@ -10,6 +10,7 @@ class User extends Authenticatable
     use Notifiable;
 
     protected $connection = "public";
+    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -31,5 +32,9 @@ class User extends Authenticatable
 
     public function dado() {
         return $this->hasOne(Dado::class, 'matricula', 'matricula');
+    }
+
+    public function tema() {
+        return $this->belongsTo(Tema::class);
     }
 }
