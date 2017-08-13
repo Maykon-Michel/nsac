@@ -46,7 +46,7 @@
                         Temas <span class="caret"></span><span class="glyphicon glyphicon-tint"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        @foreach(\App\Tema::get() as $tema)
+                        @foreach(\App\Tema::orderBy('nome')->get() as $tema)
                             <li><a href="tema/{{ $tema->id }}">{{ $tema->nome }}</a></li>
                         @endforeach
                     </ul>
