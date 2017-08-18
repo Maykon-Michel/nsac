@@ -6,13 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateDadosTable extends Migration
 {
-    protected $connection = "alunos";
-
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::connection('alunos')->create('dados', function (Blueprint $table) {
@@ -34,11 +27,6 @@ class CreateDadosTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::connection('alunos')->dropIfExists('dados');

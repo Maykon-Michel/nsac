@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateEnderecoTable extends Migration
 {
-    protected $connection = "alunos";
+    
 
     /**
      * Run the migrations.

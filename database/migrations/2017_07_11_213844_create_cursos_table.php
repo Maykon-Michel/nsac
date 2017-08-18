@@ -22,7 +22,7 @@ class CreateCursosTable extends Migration
             $table->smallInteger('ano_inicial')->nullable();
             $table->smallInteger('ano_final')->nullable();
             $table->string('ato_legal', 30)->nullable();
-            $table->boolean('ativo')->defaulr(true);
+            $table->boolean('ativo')->default(true);
         });
     }
 

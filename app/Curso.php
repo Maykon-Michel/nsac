@@ -8,6 +8,6 @@
         protected $connection = "public";
 
         public function turma() {
-            return $this->belongsTo(Turma::class);
+            return $this->belongsTo(Turma::class, 'codigo', 'turma');
         }
     }
