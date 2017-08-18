@@ -6,11 +6,11 @@
         {{ csrf_field() }}
         <div class="input-group">
             <label for="ra" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
-            <input type="text" name="email" class="form-control" id="email" placeholder="R.A.">
+            <input name="email" class="form-control" id="email" placeholder="R.A. ou email">
         </div>
         <div class="input-group">
             <label for="senha" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></label>
-            <input type="text" name="password" class="form-control" id="password" placeholder="Senha">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Senha">
         </div>
         <input type="submit" class="btn btn-block btn-raised btn-primary" value="Entrar">
     </form>
