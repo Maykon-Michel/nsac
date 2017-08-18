@@ -31,13 +31,13 @@
                     <label class="control-label">Sexo</label>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="sexo" value="0" {{ Auth::user()->dado->sexo ?: 'checked' }}>
+                            <input type="radio" name="sexo" value="0" {{ Auth::user()->dado->sexo ?: 'checked' }} disabled>
                             Masculino
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="sexo" value="1" {{ Auth::user()->dado->sexo ? 'checked' : '' }}>
+                            <input type="radio" name="sexo" value="1" {{ Auth::user()->dado->sexo ? 'checked' : '' }} disabled>
                             Feminino
                         </label>
                     </div>

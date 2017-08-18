@@ -8,7 +8,7 @@
         protected $connection = "alunos";
 
         public function notas() {
-            return $this->hasMany(Nota::class, 'aluno');
+            return $this->hasMany(Nota::class, 'aluno', 'matricula');
         }
 
         public function getEndereco() {
